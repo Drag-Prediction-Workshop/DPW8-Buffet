@@ -14,7 +14,7 @@ DATASETAUXDATA GridId          = "Multiblock"
 DATASETAUXDATA Discretization  = "Finite difference"
 DATASETAUXDATA Order           = "2"
 DATASETAUXDATA DistanceCalc    = "Exact"
-DATASETAUXDATA Notes           = " "
+DATASETAUXDATA Notes           = "For this 2D grid, GRID_FAC is computed at 1.0/((GRID_SIZE)**(p_order/spaceDim)) = 1.0/GRID_SIZE"
 
 ZONE T = "005.02 - Grid Level 1"
 AUXDATA Tstatic         = "271.0"
