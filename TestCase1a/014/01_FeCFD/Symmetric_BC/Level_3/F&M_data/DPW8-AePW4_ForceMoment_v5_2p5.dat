@@ -81,14 +81,14 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
-DATASETAUXDATA ParticipantID   = "014"
+DATASETAUXDATA ParticipantID   = "014.01"
 DATASETAUXDATA SubmissionDate  = "5th Nov,2024"
 DATASETAUXDATA Name            = "Kartik Venkatraman, Adithya Udupa"
 DATASETAUXDATA Email           = "kartik@iisc.ac.in, adithyaudupa3@gmail.com"
 DATASETAUXDATA Institution     = "Indian Institute of Science"
 DATASETAUXDATA SolverName      = "SU2 8.0.1 'Harrier'"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
-DATASETAUXDATA TurbulenceModel = "SA Edwards"
+DATASETAUXDATA TurbulenceModel = "SA Edwards-Chandra"
 DATASETAUXDATA GridId          = "Hybrid"
 DATASETAUXDATA Notes           = "Symmetric boundary condition is applied"
 
@@ -101,17 +101,15 @@ DATASETAUXDATA Notes           = "Symmetric boundary condition is applied"
 #    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
 #-------------------------------------------------------------------------------
 ZONE T="014.01 GRID LEVEL 3"
-AUXDATA Tstatic         = -999
+AUXDATA Tstatic         = 271K
 AUXDATA Deltat          = -999
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-3.cgns"
 AUXDATA Misc            = "Symmetric boundary condition is applied"
-GRID_LEVEL           GRID_SIZE            GRID_FAC             MACH                 REY                  ALPHA                CL_TOT               CD_TOT               CM_TOT               CL_WING              CD_WING              CM_WING              CD_PR                CD_SF                CL_TAIL              CD_TAIL              CM_TAIL              CL_FUS               CD_FUS               CM_FUS               CL_NAC               CD_NAC               CM_NAC               CL_PY                CD_PY                CM_PY                CPU_Hours            DELTAT               CTUSTART             CTUAVG               Q/E                 
 3.0                  150333.0             0.0003537            0.73                 3000000.0            2.5                  0.95918859           0.02891962           0.14692685           -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0
 
 ZONE T="014.01 ALPHA 2.5"
-AUXDATA Tstatic         = -999
+AUXDATA Tstatic         = 271K
 AUXDATA Deltat          = -999
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-3.cgns"
 AUXDATA Misc            = "Symmetric boundary condition is applied"
-GRID_LEVEL           GRID_SIZE            GRID_FAC             MACH                 REY                  ALPHA                CL_TOT               CD_TOT               CM_TOT               CL_WING              CD_WING              CM_WING              CD_PR                CD_SF                CL_TAIL              CD_TAIL              CM_TAIL              CL_FUS               CD_FUS               CM_FUS               CL_NAC               CD_NAC               CM_NAC               CL_PY                CD_PY                CM_PY                CPU_Hours            DELTAT               CTUSTART             CTUAVG               Q/E                 
 3.0                  150333.0             0.0003537            0.73                 3000000.0            2.5                  0.95918859           0.02891962           0.14692685           -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0               -999.0

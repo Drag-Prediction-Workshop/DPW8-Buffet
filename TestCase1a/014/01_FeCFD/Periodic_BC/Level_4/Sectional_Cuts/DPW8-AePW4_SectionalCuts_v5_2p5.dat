@@ -63,14 +63,14 @@ VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP"   "CF"   "CFX"   "CFY"   "CFZ"
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
-DATASETAUXDATA ParticipantID   = "014"
+DATASETAUXDATA ParticipantID   = "014.02"
 DATASETAUXDATA SubmissionDate  = "5th Nov,2024"
 DATASETAUXDATA Name            = "Kartik Venkatraman, Adithya Udupa"
 DATASETAUXDATA Email           = "kartik@iisc.ac.in, adithyaudupa3@gmail.com"
 DATASETAUXDATA Institution     = "Indian Institute of Science"
 DATASETAUXDATA SolverName      = "SU2 8.0.1 'Harrier'"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
-DATASETAUXDATA TurbulenceModel = "SA Edwards"
+DATASETAUXDATA TurbulenceModel = "SA Edwards-Chandra"
 DATASETAUXDATA GridId          = "Hybrid"
 DATASETAUXDATA Notes           = "Periodic boundary condition is applied "
 
@@ -81,14 +81,13 @@ AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3e6"
 AUXDATA Alpha           = "2.5"
-AUXDATA Tstatic         = "-999"
+AUXDATA Tstatic         = "271K"
 AUXDATA CLtotal         = "1.22263737"
 AUXDATA Eta             = "-999"
 AUXDATA Dt              = "-999"
 AUXDATA CtuStart        = "-999"
 AUXDATA CtuAvg          = "-999"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-4.cgns"
-X                    Y                    Z                    X/C                  CP                   CF                   CFX                  CFY                  CFZ                 
 0.0735621            -0.0115              0.0151903            -0.31983522          -1.38449             0.00496215           0.00495932           0.0                  0.0001674           
 0.0744794            -0.0115              0.0152206            -0.32382348          -1.38423             0.00495829           0.00495569           0.0                  0.00016062          
 0.075397             -0.0115              0.0152498            -0.32781304          -1.38413             0.00495388           0.00495149           0.0                  0.00015388          
