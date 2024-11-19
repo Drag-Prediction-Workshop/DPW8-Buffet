@@ -58,7 +58,7 @@
 
 TITLE = "024.01"
 # Column       1     2     3     4       5      6      7       8       9        
-VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP"   "CF"   "CFX"   "CFY"   "CFZ"     
+VARIABLES =   "X"   "Y"   "Z"    "CP"   "CF"   "CFX"   "CFY"   "CFZ"   "XoC"  
 
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
