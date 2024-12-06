@@ -1,0 +1,144 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12 
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS" 
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "010"
+DATASETAUXDATA SubmissionDate  = "05-Dec-2024 14:01:54" 
+DATASETAUXDATA Name            = "Konrad Goc" 
+DATASETAUXDATA Email           = "konrad.a.goc@boeing.com"
+DATASETAUXDATA Institution     = "Boeing"
+DATASETAUXDATA SolverName      = "charLES"
+DATASETAUXDATA BasicAlgorithm  = "WMLES"
+DATASETAUXDATA TurbulenceModel = "Dynamic Smagorinsky SGS Model, Algebraic Equilibrium Wall Model"
+DATASETAUXDATA GridId          = "Voronoi"
+DATASETAUXDATA Notes           = "N/A"
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T="010.1 GRID LEVEL STRAND-L9-L11" 
+AUXDATA Tstatic         = "271" 
+AUXDATA Deltat          = "4.8809e-07,4.8791e-07,4.8618e-07,4.8617e-07,4.8595e-07,4.8580e-07,4.8530e-07,4.8517e-07,4.8493e-07,4.8398e-07" 
+AUXDATA GridFileName    = "Custom Voronoi Grid" 
+AUXDATA Misc            = "N/A" 
+9.11 9218281 2.274574e-05 0.73 3000000 1.36 0.673147 0.016051 -0.120015 0.002047 0.000130 0.000440
+9.11 9218281 2.274574e-05 0.73 3000000 1.50 0.702558 0.016810 -0.120129 0.001880 0.000123 0.000434
+9.11 9218281 2.274574e-05 0.73 3000000 2.50 0.903618 0.029839 -0.132207 0.002547 0.000255 0.000956
+9.11 9218281 2.274574e-05 0.73 3000000 3.00 0.954032 0.038743 -0.134365 0.005236 0.000558 0.002023
+9.11 9218281 2.274574e-05 0.73 3000000 3.10 0.961115 0.040593 -0.134455 0.006058 0.000680 0.002412
+9.11 9218281 2.274574e-05 0.73 3000000 3.25 0.967947 0.043178 -0.133806 0.007927 0.000879 0.002997
+9.11 9218281 2.274574e-05 0.73 3000000 3.40 0.973423 0.045764 -0.132974 0.010530 0.001145 0.003800
+9.11 9218281 2.274574e-05 0.73 3000000 3.50 0.974393 0.047365 -0.131881 0.017194 0.001772 0.005702
+9.11 9218281 2.274574e-05 0.73 3000000 3.60 0.975003 0.049047 -0.130907 0.027644 0.002820 0.008855
+9.11 9218281 2.274574e-05 0.73 3000000 3.90 0.966719 0.053486 -0.126155 0.064063 0.006332 0.018912
+
+ZONE T="010.2 GRID LEVEL STRAND-L10-L12" 
+AUXDATA Tstatic         = "271" 
+AUXDATA Deltat          = "2.4741e-07,2.4798e-07,2.4708e-07,2.4592e-07,2.4555e-07,2.4523e-07,2.4511e-07,2.4503e-07,2.4459e-07,2.4393e-07" 
+AUXDATA GridFileName    = "Custom Voronoi Grid" 
+AUXDATA Misc            = "N/A" 
+10.12 14350510 1.693383e-05 0.73 3000000 1.36 0.690593 0.015592 -0.122645 0.001943 0.000110 0.000356
+10.12 14350510 1.693383e-05 0.73 3000000 1.50 0.721711 0.016442 -0.123073 0.002181 0.000118 0.000389
+10.12 14350510 1.693383e-05 0.73 3000000 2.50 0.915525 0.030181 -0.135494 0.003037 0.000325 0.001169
+10.12 14350510 1.693383e-05 0.73 3000000 3.00 0.947423 0.038434 -0.134137 0.008536 0.000879 0.003057
+10.12 14350510 1.693383e-05 0.73 3000000 3.10 0.948611 0.039916 -0.132936 0.014644 0.001433 0.004825
+10.12 14350510 1.693383e-05 0.73 3000000 3.25 0.948946 0.042252 -0.131161 0.022479 0.002192 0.007141
+10.12 14350510 1.693383e-05 0.73 3000000 3.40 0.938969 0.044328 -0.128209 0.055978 0.005049 0.016560
+10.12 14350510 1.693383e-05 0.73 3000000 3.50 0.939211 0.046088 -0.127591 0.065123 0.005932 0.019004
+10.12 14350510 1.693383e-05 0.73 3000000 3.60 0.936487 0.047947 -0.126948 0.077130 0.007006 0.022036
+10.12 14350510 1.693383e-05 0.73 3000000 3.90 0.928365 0.052582 -0.123396 0.100643 0.009510 0.028117
+
+ZONE T="010.3 GRID LEVEL STRAND-L11-L13" 
+AUXDATA Tstatic         = "271" 
+AUXDATA Deltat          = "1.2699e-07,1.2588e-07,1.2593e-07,1.2546e-07,1.2628e-07,1.2527e-07,1.2501e-07,1.2485e-07,1.2528e-07,1.2434e-07" 
+AUXDATA GridFileName    = "Custom Voronoi Grid" 
+AUXDATA Misc            = "N/A" 
+11.13 34592561 9.419146e-06 0.73 3000000 1.36 0.698497 0.015196 -0.123848 0.001905 0.000110 0.000317
+11.13 34592561 9.419146e-06 0.73 3000000 1.50 0.726968 0.016003 -0.123872 0.002273 0.000114 0.000376
+11.13 34592561 9.419146e-06 0.73 3000000 2.50 0.905780 0.029098 -0.133044 0.002458 0.000290 0.001068
+11.13 34592561 9.419146e-06 0.73 3000000 3.00 0.947616 0.037814 -0.133769 0.006626 0.000713 0.002530
+11.13 34592561 9.419146e-06 0.73 3000000 3.10 0.949635 0.039324 -0.132706 0.010659 0.001047 0.003683
+11.13 34592561 9.419146e-06 0.73 3000000 3.25 0.953174 0.041687 -0.131253 0.012385 0.001321 0.004381
+11.13 34592561 9.419146e-06 0.73 3000000 3.40 0.955050 0.044189 -0.130062 0.024821 0.002358 0.007728
+11.13 34592561 9.419146e-06 0.73 3000000 3.50 0.946398 0.045687 -0.127807 0.053624 0.004787 0.015708
+11.13 34592561 9.419146e-06 0.73 3000000 3.60 0.945905 0.046820 -0.125849 0.047742 0.004565 0.014178
+11.13 34592561 9.419146e-06 0.73 3000000 3.90 0.931887 0.051661 -0.122263 0.091692 0.008638 0.025470
+
