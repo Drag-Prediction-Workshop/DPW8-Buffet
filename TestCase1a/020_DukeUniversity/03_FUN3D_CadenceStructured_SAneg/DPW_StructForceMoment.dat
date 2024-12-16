@@ -82,7 +82,7 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
 DATASETAUXDATA ParticipantID   = "020"
-DATASETAUXDATA SubmissionDate  = "10/31/24"
+DATASETAUXDATA SubmissionDate  = "12/15/24"
 DATASETAUXDATA Name            = "Harry Xu"
 DATASETAUXDATA Email           = "tx20@duke.edu"
 DATASETAUXDATA Institution     = "Duke University"
@@ -104,7 +104,7 @@ DATASETAUXDATA Notes           = "Committee grid flattened to 2D"
 ZONE T="020.03 GRID LEVEL 1"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 1.36 0.77282777 0.01392874 -0.13052095 -999 -999 -999 0.00747233 0.00645641 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -121,7 +121,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 GRID LEVEL 2"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 2 240554 0.0002585383333038 0.73 3000000 1.36 0.77635866 0.01380045 -0.13103523 -999 -999 -999 0.00734164 0.00645881 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -138,7 +138,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 GRID LEVEL 3"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 3 378312 0.0001911759491960 0.73 3000000 1.36 0.77778839 0.01387488 -0.13130440 -999 -999 -999 0.00741326 0.00646162 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -155,7 +155,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 GRID LEVEL 4"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 4 596792 0.0001410754155330 0.73 3000000 1.36 0.77876154 0.01396638 -0.13112866 -999 -999 -999 0.00750018 0.00646620 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -172,7 +172,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 GRID LEVEL 5"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 5 937027 0.0001044315995342 0.73 3000000 1.36 0.78195607 0.01379818 -0.13211627 -999 -999 -999 0.00731589 0.00648230 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -189,7 +189,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 GRID LEVEL 6"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 6 1471296 0.0000773036435213 0.73 3000000 1.36 0.78564359 0.01410038 -0.13251002 -999 -999 -999 0.00756254 0.00653783 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -206,7 +206,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 1.36"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 1.36 0.77282777 0.01392874 -0.13052095 -999 -999 -999 0.00747233 0.00645641 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -219,7 +219,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 1.50"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 1.50 0.80295029 0.01514961 -0.13161135 -999 -999 -999 0.00875670 0.00639290 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -232,7 +232,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 2.50"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 2.50 0.95805993 0.02996126 -0.13975889 -999 -999 -999 0.02408701 0.00587425 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -245,7 +245,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.00"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.00 0.98706027 0.03870074 -0.13833037 -999 -999 -999 0.03308234 0.00561840 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -258,7 +258,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.10"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.10 0.98869804 0.04034062 -0.13725951 -999 -999 -999 0.03477668 0.00556393 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -271,7 +271,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.25"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.25 0.98707584 0.04252517 -0.13477108 -999 -999 -999 0.03704380 0.00548137 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -284,7 +284,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.40"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.40 0.98369833 0.04459619 -0.13221193 -999 -999 -999 0.03919334 0.00540284 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -297,7 +297,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.50"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.50 0.98352695 0.04619996 -0.13129846 -999 -999 -999 0.04084544 0.00535452 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -310,7 +310,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.60"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.60 0.98614613 0.04811460 -0.13130460 -999 -999 -999 0.04280584 0.00530875 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
@@ -323,7 +323,7 @@ AUXDATA Misc            = "Committee grids flattened to 2D"
 ZONE T="020.03 ALPHA 3.90"
 AUXDATA Tstatic         = "271K"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
-AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured"
 AUXDATA Misc            = "Committee grids flattened to 2D"
 
 1 151003 0.0003526492378809 0.73 3000000 3.90 1.00023882 0.05495741 -0.13333545 -999 -999 -999 0.04978620 0.00517121 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
