@@ -90,7 +90,7 @@ DATASETAUXDATA SolverName      = "SU2 8.0.1 'Harrier'"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA Edwards-Chandra"
 DATASETAUXDATA GridId          = "Hybrid"
-DATASETAUXDATA Notes           = "Symmetric boundary condition is applied"
+DATASETAUXDATA Notes           = "Periodic boundary condition is applied"
 
 
 #-------------------------------------------------------------------------------
