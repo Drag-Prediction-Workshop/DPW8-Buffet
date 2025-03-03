@@ -1,1 +1,2 @@
-Test Case 1b: ONERA OAT15A Airfoil Data Submissions
+# 2024-Buffet
+Test Case 1b
