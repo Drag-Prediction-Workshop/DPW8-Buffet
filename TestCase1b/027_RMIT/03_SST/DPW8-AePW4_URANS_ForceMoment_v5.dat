@@ -1,0 +1,188 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title 027.03: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "027.03"
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12            
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS"     
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "027.03"
+DATASETAUXDATA SubmissionDate  = "18/03/2025"
+DATASETAUXDATA Name            = "Michael Candon, Truman Gerner"
+DATASETAUXDATA Email           = "candon.michael@rmit.edu.au, s4134495@student.rmit.edu.au"
+DATASETAUXDATA Institution     = "RMIT"
+DATASETAUXDATA SolverName      = "Fluent 2024 R2"
+DATASETAUXDATA BasicAlgorithm  = "URANS"
+DATASETAUXDATA TurbulenceModel = "SST-kw (with curvature correction)"
+DATASETAUXDATA GridId          = "Multiblock hexahedral"
+DATASETAUXDATA Notes           = "For GRID_SIZE: L3, ALPHA: 3.10 - Buffet was not observed, however, simulation was not run for long enough to achieve a completely stable flowfield.
+			          For GRID_SIZE: L2, ALPHA: 3.10 - Buffet was observed, but the simulation was not run for long enough to achieve a stable flow LCO."
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T="027.03 GRID LEVEL 1"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured_Level-1"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.10  0.894745842   0.0339963695  -0.116914345   0.895039441    0.034049076   0.117105258
+             1             151003    0.00035    0.7300   3000000.00  3.25  0.892347409   0.0361528424  -0.115058598   0.893293041    0.036309304   0.115646630	
+             1             151003    0.00035    0.7300   3000000.00  3.40  0.891999029   0.0384790587  -0.113874218   0.893599314    0.038725211   0.114823913	
+             1             151003    0.00035    0.7300   3000000.00  3.50  0.886579184   0.0396784253  -0.111889662   0.888761381    0.040000686   0.113153751
+             1             151003    0.00035    0.7300   3000000.00  3.60  0.889756197   0.0415419203  -0.112227237   0.892466773    0.041923868   0.113739529	
+             1             151003    0.00035    0.7300   3000000.00  3.90  0.879880263   0.0456778778  -0.108236975   0.883961836    0.046206596   0.110330150
+
+ZONE T="027.03 GRID LEVEL 2"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured_Level-2"
+AUXDATA Misc            = ""
+             2             151003    0.00035    0.7300   3000000.00  3.10  0.894337456   0.0339925027  -0.116913787   0.894528008    0.034028757   0.117040834    
+             2             151003    0.00035    0.7300   3000000.00  3.25  0.893248653   0.0361828109  -0.115239156   0.893927946    0.036297771   0.115665136	
+             2             151003    0.00035    0.7300   3000000.00  3.40  0.892177795   0.0385104153  -0.114112303   0.893827352    0.038768350   0.115091015	
+             2             151003    0.00035    0.7300   3000000.00  3.50  0.888130011   0.0398666572  -0.112353259   0.890189487    0.040175642   0.113540909
+             2             151003    0.00035    0.7300   3000000.00  3.60  0.885296065   0.0411967829  -0.110948902   0.887774477    0.041555233   0.112344929	
+             2             151003    0.00035    0.7300   3000000.00  3.90  0.878823662   0.0455665040  -0.108188332   0.883192305    0.046133006   0.110447026
+
+ZONE T="027.03 GRID LEVEL 3"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured_Level-3"
+AUXDATA Misc            = ""
+             3             151003    0.00035    0.7300   3000000.00  3.10  0.891187226   0.0338095474  -0.116192302   0.891187248    0.033809550   0.116192313    
+             3             151003    0.00035    0.7300   3000000.00  3.25  0.891724288   0.0360175470  -0.114652739   0.891841323    0.036036683   0.114723538	
+             3             151003    0.00035    0.7300   3000000.00  3.40  0.887420882   0.0382364958  -0.112843194   0.888532240    0.038402760   0.113484513	
+             3             151003    0.00035    0.7300   3000000.00  3.50  0.885340241   0.0396631717  -0.111745341   0.886980900    0.039907621   0.112684725
+             3             151003    0.00035    0.7300   3000000.00  3.60  0.885084764   0.0412465839  -0.111174555   0.887165591    0.041542647   0.112320993	
+             3             151003    0.00035    0.7300   3000000.00  3.90  0.877155145   0.0457078332  -0.108246354   0.881346551    0.046254879   0.110407036
+
+ZONE T="027.03 ALPHA 3.10"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.10  0.894745842   0.0339963695  -0.116742684   0.895039441    0.034049076   0.117035146    
+             2             151003    0.00035    0.7300   3000000.00  3.10  0.894337456   0.0339925027  -0.116913787   0.894528008    0.034028757   0.117040834
+             3             151003    0.00035    0.7300   3000000.00  3.10  0.891187226   0.0338095474  -0.116192302   0.891187248    0.033809550   0.116192313
+
+ZONE T="027.03 ALPHA 3.25"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.25  0.892347409   0.0361528424  -0.115058598   0.893293041    0.036309304   0.115646630
+             2             151003    0.00035    0.7300   3000000.00  3.25  0.893248653   0.0361828109  -0.115239156   0.893927946    0.036297771   0.115665136   
+             3             151003    0.00035    0.7300   3000000.00  3.25  0.891724288   0.0360175470  -0.114652739   0.891841323    0.036036683   0.114723538
+
+ZONE T="027.03 ALPHA 3.40"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.40  0.891999029   0.0384790587  -0.113874218   0.893599314    0.038725211   0.114823913    
+             2             151003    0.00035    0.7300   3000000.00  3.40  0.892177795   0.0385104153  -0.114112303   0.893827352    0.038768350   0.115091015    
+             3             151003    0.00035    0.7300   3000000.00  3.40  0.887420882   0.0382364958  -0.112843194   0.888532240    0.038402760   0.113484513
+
+ZONE T="027.03 ALPHA 3.50"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.50  0.886579184   0.0396784253  -0.111889662   0.888761381    0.040000686   0.113153751    
+             2             151003    0.00035    0.7300   3000000.00  3.50  0.888130011   0.0398666572  -0.112353259   0.890189487    0.040175642   0.113540909
+             3             151003    0.00035    0.7300   3000000.00  3.50  0.885340241   0.0396631717  -0.111745341   0.886980900    0.039907621   0.112684725
+
+ZONE T="027.03 ALPHA 3.60"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.60  0.889756197   0.0415419203  -0.112227237   0.892466773    0.041923868   0.113739529    
+             2             151003    0.00035    0.7300   3000000.00  3.60  0.885296065   0.0411967829  -0.110948902   0.887774477    0.041555233   0.112344929
+             3             151003    0.00035    0.7300   3000000.00  3.60  0.885084764   0.0412465839  -0.111174555   0.887165591    0.041542647   0.112320993
+
+ZONE T="027.03 ALPHA 3.90"
+AUXDATA Tstatic         = "271"
+AUXDATA Deltat          = "5e-6s"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = ""
+             1             151003    0.00035    0.7300   3000000.00  3.90  0.879880263   0.0456778778  -0.108236975   0.883961836    0.046206596   0.110330150
+             2             151003    0.00035    0.7300   3000000.00  3.90  0.878823662   0.0455665040  -0.108188332   0.883192305    0.046133006   0.110447026
+             3             151003    0.00035    0.7300   3000000.00  3.90  0.877155145   0.0457078332  -0.108246354   0.881346551    0.046254879   0.110407036
