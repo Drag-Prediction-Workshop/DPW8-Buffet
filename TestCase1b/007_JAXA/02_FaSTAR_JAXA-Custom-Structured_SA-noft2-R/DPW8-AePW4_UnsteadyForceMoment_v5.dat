@@ -1,0 +1,226 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "007.05"
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12            
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS"     
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "007"
+DATASETAUXDATA SubmissionDate  = "November 30th, 2024"
+DATASETAUXDATA Name            = "Andrea Sansica"
+DATASETAUXDATA Email           = "sansica.andrea@jaxa.jp"
+DATASETAUXDATA Institution     = "JAXA"
+DATASETAUXDATA SolverName      = "FaSTAR"
+DATASETAUXDATA BasicAlgorithm  = "URANS"
+DATASETAUXDATA TurbulenceModel = "SA-noft2-R"
+DATASETAUXDATA GridId          = "Custom"
+DATASETAUXDATA Notes           = "-999"
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T= "007.05 GRID LEVEL 1"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+1 56625 0.0006781532644176036 0.73 3000000 1.50 7.909195e-01 1.537715e-02 -1.297611e-01 3.765792e-04 8.097199e-06 1.736213e-05
+1 56625 0.0006781532644176036 0.73 3000000 3.10 9.649405e-01 3.923380e-02 -1.320561e-01 5.024516e-05 5.841927e-06 3.195297e-05
+1 56625 0.0006781532644176036 0.73 3000000 3.50 9.585265e-01 4.571799e-02 -1.276744e-01 5.574149e-02 4.959883e-03 1.556965e-02
+1 56625 0.0006781532644176036 0.73 3000000 3.90 9.495454e-01 5.269690e-02 -1.246471e-01 9.071821e-02 8.139637e-03 2.360186e-02
+
+ZONE T= "007.05 GRID LEVEL 2"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+2 116480 0.0004192751201053553 0.73 3000000 1.50 7.986669e-01 1.510395e-02 -1.312266e-01 4.407644e-04 8.610786e-06 2.413169e-05
+2 116480 0.0004192751201053553 0.73 3000000 3.10 9.781546e-01 3.970370e-02 -1.353013e-01 6.815553e-05 7.737065e-06 3.598111e-05
+2 116480 0.0004192751201053553 0.73 3000000 3.50 9.752700e-01 4.619295e-02 -1.306363e-01 3.871838e-02 3.639871e-03 1.117937e-02
+2 116480 0.0004192751201053553 0.73 3000000 3.90 9.684268e-01 5.275638e-02 -1.269292e-01 7.449605e-02 6.979228e-03 2.013015e-02
+
+ZONE T= "007.05 GRID LEVEL 3"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+3 234750 0.00026278239473475495 0.73 3000000 1.50 8.010131e-01 1.503933e-02 -1.316807e-01 4.852335e-04 9.478755e-06 2.814911e-05
+3 234750 0.00026278239473475495 0.73 3000000 3.10 9.840810e-01 4.000253e-02 -1.367784e-01 8.434802e-05 1.017059e-05 4.006560e-05
+3 234750 0.00026278239473475495 0.73 3000000 3.50 9.861173e-01 4.654282e-02 -1.325835e-01 1.590905e-02 1.523852e-03 4.649305e-03
+3 234750 0.00026278239473475495 0.73 3000000 3.90 9.830052e-01 5.355102e-02 -1.296235e-01 5.930778e-02 5.749200e-03 1.635205e-02
+
+ZONE T= "007.05 GRID LEVEL 4"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 1.36 7.725041e-01 1.378687e-02 -1.308344e-01 5.144190e-04 1.313637e-05 2.415714e-05
+4 497120 0.0001593526081585157 0.73 3000000 1.50 8.025862e-01 1.503171e-02 -1.319791e-01 5.179607e-04 1.013174e-05 3.060735e-05
+4 497120 0.0001593526081585157 0.73 3000000 2.50 9.581309e-01 2.999956e-02 -1.405269e-01 2.957501e-04 1.004703e-05 2.749198e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.00 9.862698e-01 3.859904e-02 -1.387428e-01 1.296125e-04 1.239855e-05 4.273620e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.10 9.889737e-01 4.029756e-02 -1.379815e-01 1.123841e-04 1.299137e-05 4.564875e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.25 9.917224e-01 4.283185e-02 -1.366910e-01 9.582140e-05 1.388039e-05 5.053550e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.40 9.931541e-01 4.534884e-02 -1.352678e-01 1.172967e-04 1.618606e-05 5.862203e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.50 9.935033e-01 4.701796e-02 -1.342697e-01 3.407489e-04 3.582873e-05 1.123576e-04
+4 497120 0.0001593526081585157 0.73 3000000 3.60 9.935007e-01 4.868610e-02 -1.332665e-01 2.651850e-03 2.642281e-04 7.782057e-04
+4 497120 0.0001593526081585157 0.73 3000000 3.90 9.906743e-01 5.381420e-02 -1.304912e-01 3.682308e-02 3.631600e-03 1.029850e-02
+
+ZONE T= "007.05 ALPHA 1.36"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 1.36 7.725041e-01 1.378687e-02 -1.308344e-01 5.144190e-04 1.313637e-05 2.415714e-05
+
+ZONE T= "007.05 ALPHA 1.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+1 56625 0.0006781532644176036 0.73 3000000 1.50 7.909195e-01 1.537715e-02 -1.297611e-01 3.765792e-04 8.097199e-06 1.736213e-05
+2 116480 0.0004192751201053553 0.73 3000000 1.50 7.986669e-01 1.510395e-02 -1.312266e-01 4.407644e-04 8.610786e-06 2.413169e-05
+3 234750 0.00026278239473475495 0.73 3000000 1.50 8.010131e-01 1.503933e-02 -1.316807e-01 4.852335e-04 9.478755e-06 2.814911e-05
+4 497120 0.0001593526081585157 0.73 3000000 1.50 8.025862e-01 1.503171e-02 -1.319791e-01 5.179607e-04 1.013174e-05 3.060735e-05
+
+ZONE T= "007.05 ALPHA 2.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 2.50 9.581309e-01 2.999956e-02 -1.405269e-01 2.957501e-04 1.004703e-05 2.749198e-05
+
+ZONE T= "007.05 ALPHA 3.00"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 3.00 9.862698e-01 3.859904e-02 -1.387428e-01 1.296125e-04 1.239855e-05 4.273620e-05
+
+ZONE T= "007.05 ALPHA 3.10"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+1 56625 0.0006781532644176036 0.73 3000000 3.10 9.649405e-01 3.923380e-02 -1.320561e-01 5.024516e-05 5.841927e-06 3.195297e-05
+2 116480 0.0004192751201053553 0.73 3000000 3.10 9.781546e-01 3.970370e-02 -1.353013e-01 6.815553e-05 7.737065e-06 3.598111e-05
+3 234750 0.00026278239473475495 0.73 3000000 3.10 9.840810e-01 4.000253e-02 -1.367784e-01 8.434802e-05 1.017059e-05 4.006560e-05
+4 497120 0.0001593526081585157 0.73 3000000 3.10 9.889737e-01 4.029756e-02 -1.379815e-01 1.123841e-04 1.299137e-05 4.564875e-05
+
+ZONE T= "007.05 ALPHA 3.25"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 3.25 9.917224e-01 4.283185e-02 -1.366910e-01 9.582140e-05 1.388039e-05 5.053550e-05
+
+ZONE T= "007.05 ALPHA 3.40"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 3.40 9.931541e-01 4.534884e-02 -1.352678e-01 1.172967e-04 1.618606e-05 5.862203e-05
+
+ZONE T= "007.05 ALPHA 3.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+1 56625 0.0006781532644176036 0.73 3000000 3.50 9.585265e-01 4.571799e-02 -1.276744e-01 5.574149e-02 4.959883e-03 1.556965e-02
+2 116480 0.0004192751201053553 0.73 3000000 3.50 9.752700e-01 4.619295e-02 -1.306363e-01 3.871838e-02 3.639871e-03 1.117937e-02
+3 234750 0.00026278239473475495 0.73 3000000 3.50 9.861173e-01 4.654282e-02 -1.325835e-01 1.590905e-02 1.523852e-03 4.649305e-03
+4 497120 0.0001593526081585157 0.73 3000000 3.50 9.935033e-01 4.701796e-02 -1.342697e-01 3.407489e-04 3.582873e-05 1.123576e-04
+
+ZONE T= "007.05 ALPHA 3.60"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+4 497120 0.0001593526081585157 0.73 3000000 3.60 9.935007e-01 4.868610e-02 -1.332665e-01 2.651850e-03 2.642281e-04 7.782057e-04
+
+ZONE T= "007.05 ALPHA 3.90"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "6.97009E-07 sec"
+AUXDATA GridFileName    = "JAXA Custom Grids"
+AUXDATA Misc            = "-999"
+1 56625 0.0006781532644176036 0.73 3000000 3.90 9.495454e-01 5.269690e-02 -1.246471e-01 9.071821e-02 8.139637e-03 2.360186e-02
+2 116480 0.0004192751201053553 0.73 3000000 3.90 9.684268e-01 5.275638e-02 -1.269292e-01 7.449605e-02 6.979228e-03 2.013015e-02
+3 234750 0.00026278239473475495 0.73 3000000 3.90 9.830052e-01 5.355102e-02 -1.296235e-01 5.930778e-02 5.749200e-03 1.635205e-02
+4 497120 0.0001593526081585157 0.73 3000000 3.90 9.906743e-01 5.381420e-02 -1.304912e-01 3.682308e-02 3.631600e-03 1.029850e-02
+
