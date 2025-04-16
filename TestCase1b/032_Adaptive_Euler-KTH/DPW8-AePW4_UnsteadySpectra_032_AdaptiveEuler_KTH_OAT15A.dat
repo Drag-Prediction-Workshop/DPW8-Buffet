@@ -1,0 +1,116 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 SPECTRAL CONTENT SUBMITTAL FORM (Version 6 - February 10, 2025)
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+# 
+#       NOMENCLATURE:
+#               FREQ:   Frequency (Hz)
+#                PSD:   Pressure power spectral content
+#			<p(Pa^2)> for ONERA OAT15A and <Cp[1/Hz]> for JAXA CRMWB/CRMWBNP
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       JAXA CRMWB   (Common Research Model Wing/Body)
+#                       JAXA CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#   DATA LOCATIONS: 	ONERA OAT15A:	  	provide spectral content at x/c=0.45 (Kulite 7)
+# 			JAXA CRMWB/CRMWBNP: 	x/c=0.3040 (section E, eta=0.5) and x/c=0.7903 (section E, eta=0.5).
+# 					 	x/c=0.3097 (section F, eta=0.6) and x/c=0.7677 (section F, eta=0.6).
+#				  		Refer to https://cfdws.chofu.jaxa.jp/apc/dpw/upc.html
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "032.01"
+VARIABLES =   "FREQ"  "PSD"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "032"
+DATASETAUXDATA SubmissionDate  = "2025-04-15"
+DATASETAUXDATA Name            = "Johan Jansson"
+DATASETAUXDATA Email           = "jjan@kth.se"
+DATASETAUXDATA Institution     = "KTH"
+DATASETAUXDATA SolverName      = "Adaptive Euler 2025-04-12_01"
+DATASETAUXDATA BasicAlgorithm  = "Euler (Implicit LES with free slip BC)"
+DATASETAUXDATA TurbulenceModel = "No turbulence model (Implicit LES)"
+DATASETAUXDATA GridId          = "Tet"
+DATASETAUXDATA Notes           = "Frequency has the nondimensional unit 1/CTU . The command-line used to generate the PSD is: python3 compute_psd_10212024.py -f indata.csv -o 0.5 -n 64"
+
+
+ZONE T="032.01 - ALPHA 3.5 - GRID CUSTOM01 - WING SECTION  1"
+
+AUXDATA GridLevel       = "CUSTOM01"
+AUXDATA Mach            = "0.73"
+AUXDATA Re              = "3e6"
+AUXDATA Alpha           = "3.5"
+AUXDATA Tstatic         = "271.0"
+AUXDATA CLtotal         = "-999"
+AUXDATA Eta             = "0.0"
+AUXDATA Dt              = ""
+AUXDATA CtuStart        = ""
+AUXDATA CtuAvg          = ""
+AUXDATA GridFileName    = ""
+
+0.0 2.5848535456761678e-36
+0.07423049697614648 5.760944121444153e-09
+0.14846099395229295 1.417899512558777e-08
+0.22269149092843943 8.762730043437853e-08
+0.2969219879045859 2.20977642052805e-07
+0.3711524848807324 1.7560631969410665e-08
+0.44538298185687886 7.868123397091368e-09
+0.5196134788330253 1.925881410229235e-08
+0.5938439758091718 2.9058136317673865e-09
+0.6680744727853183 1.7655751556687065e-09
+0.7423049697614648 1.782733347309306e-09
+0.8165354667376112 2.5790786377794062e-09
+0.8907659637137577 8.249021653846373e-10
+0.9649964606899042 1.1248167246765062e-09
+1.0392269576660507 2.275634114869074e-09
+1.1134574546421971 5.683851802039459e-10
+1.1876879516183436 3.8729944577603857e-10
+1.26191844859449 2.766187421574656e-10
+1.3361489455706366 1.05182164501017e-09
+1.410379442546783 4.3782213612451476e-10
+1.4846099395229295 2.682328410643075e-09
+1.558840436499076 1.751087105132678e-09
+1.6330709334752225 3.987588100116483e-09
+1.707301430451369 1.5574961029102175e-09
+1.7815319274275154 2.775903322284691e-09
+1.855762424403662 5.514355178344667e-10
+1.9299929213798084 8.743735987527545e-09
+2.004223418355955 3.1500860473298054e-09
+2.0784539153321013 1.0884729848964474e-09
+2.152684412308248 1.0214544196143803e-09
+2.2269149092843943 1.3836341582799553e-09
+2.3011454062605408 4.421489458292195e-09
+2.3753759032366872 1.54823631247394e-10
