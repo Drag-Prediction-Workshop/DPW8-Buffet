@@ -56,7 +56,7 @@
 #
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "007.01"
+TITLE = "007.04"
 # Column       1     2     3     4       5      6      7       8       9
 VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP"   "CF"   "CFX"   "CFY"   "CFZ"
 
@@ -76,7 +76,7 @@ DATASETAUXDATA Notes           = "-999"
 
 
 
-ZONE T= "007.01 - ALPHA 1.50 - GRID 5 - WING SECTION  1"
+ZONE T= "007.04 - ALPHA 1.50 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -1395,7 +1395,7 @@ AUXDATA GridFileName    = "JAXA Custom Grids"
 2.299985e+02 1.150000e+02 -5.740658e-01 9.999934e-01 9.47564241e-02 7.15834350e-03 7.15826873e-03 -8.53922881e-08 -3.27171143e-05
 
 
-ZONE T= "007.01 - ALPHA 3.10 - GRID 5 - WING SECTION  1"
+ZONE T= "007.04 - ALPHA 3.10 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -2714,7 +2714,7 @@ AUXDATA GridFileName    = "JAXA Custom Grids"
 2.299985e+02 1.150000e+02 -5.740658e-01 9.999934e-01 -8.65866348e-03 8.37919506e-03 8.37878966e-03 -1.00220664e-07 -8.24233968e-05
 
 
-ZONE T= "007.01 - ALPHA 3.90 - GRID 5 - WING SECTION  1"
+ZONE T= "007.04 - ALPHA 3.90 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"

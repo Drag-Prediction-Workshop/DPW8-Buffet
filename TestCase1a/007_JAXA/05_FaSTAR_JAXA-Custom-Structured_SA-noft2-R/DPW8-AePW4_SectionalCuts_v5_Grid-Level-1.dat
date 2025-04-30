@@ -12,7 +12,7 @@
 #                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
 #                     K.KK ALPHA: Angle of attack for the solution
 #                     L    GRID LEVEL: 1, 2, 3, 4, 5, or 6
-#                     EXAMPLE: 007.02 - ALPHA 2.50 - GRID 3 - WING SECTION  1
+#                     EXAMPLE: 007.05 - ALPHA 2.50 - GRID 3 - WING SECTION  1
 #
 # 
 #       NOMENCLATURE:
@@ -56,7 +56,7 @@
 #
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "007.02"
+TITLE = "007.05"
 # Column       1     2     3     4       5      6      7       8       9
 VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP"   "CF"   "CFX"   "CFY"   "CFZ"
 
@@ -76,7 +76,7 @@ DATASETAUXDATA Notes           = "-999"
 
 
 
-ZONE T= "007.02 - ALPHA 1.50 - GRID 1 - WING SECTION  1"
+ZONE T= "007.05 - ALPHA 1.50 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -465,7 +465,7 @@ AUXDATA GridFileName    = "JAXA Custom Grids"
 2.299954e+02 1.150000e+02 -5.737164e-01 9.999801e-01 9.98248194e-02 6.24404360e-03 6.23503471e-03 -1.51119850e-08 -3.35294844e-04
 
 
-ZONE T= "007.02 - ALPHA 3.10 - GRID 1 - WING SECTION  1"
+ZONE T= "007.05 - ALPHA 3.10 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -854,7 +854,7 @@ AUXDATA GridFileName    = "JAXA Custom Grids"
 2.299954e+02 1.150000e+02 -5.737164e-01 9.999801e-01 -5.78399729e-03 7.44127874e-03 7.42913532e-03 -1.51916838e-08 -4.24944311e-04
 
 
-ZONE T= "007.02 - ALPHA 3.90 - GRID 1 - WING SECTION  1"
+ZONE T= "007.05 - ALPHA 3.90 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
