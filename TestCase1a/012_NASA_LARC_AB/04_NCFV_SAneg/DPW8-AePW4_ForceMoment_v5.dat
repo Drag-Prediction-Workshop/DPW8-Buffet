@@ -90,7 +90,7 @@ DATASETAUXDATA SolverName      = "FUN3D 14.1"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA-neg"
 DATASETAUXDATA GridId          = "Committee-provided - Cadence_Grids.REV01 Unstructured"
-DATASETAUXDATA Notes           = ""
+DATASETAUXDATA Notes           = "Node-centered finite volume discretization"
 
 #-------------------------------------------------------------------------------
 #  REQUIRED:  VEHICLE F&M
