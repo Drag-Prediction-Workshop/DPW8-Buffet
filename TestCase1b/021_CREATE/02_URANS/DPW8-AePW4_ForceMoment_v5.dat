@@ -123,3 +123,93 @@ AUXDATA Misc            = "N/A"
 
 
 
+ZONE T="021.01 ALPHA 1.36"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 1.36   0.80467551    0.01449185    -0.13718270 
+
+
+
+ZONE T="021.01 ALPHA 1.50"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 1.50   0.83541088    0.01594214    -0.13881751 
+
+
+
+ZONE T="021.01 ALPHA 2.50"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 2.50   0.99482818    0.03250404    -0.15053790 
+
+
+
+ZONE T="021.01 ALPHA 3.00"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.00   1.02993578    0.04211054    -0.15102787 
+
+
+
+ZONE T="021.01 ALPHA 3.10"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.10   1.03199433    0.04389795    -0.15023654 
+
+
+
+ZONE T="021.01 ALPHA 3.25"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.25   1.03114674    0.04644472    -0.14837107 
+
+
+
+ZONE T="021.01 ALPHA 3.40"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.40   1.03636091    0.04929639    -0.14774526 
+
+
+
+ZONE T="021.01 ALPHA 3.50"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.50   1.03984805    0.05122000    -0.14736999 
+
+
+
+ZONE T="021.01 ALPHA 3.60"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.60   1.04290966    0.05314123    -0.14696176 
+
+
+
+ZONE T="021.01 ALPHA 3.90"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA Deltat          = "N/A"
+AUXDATA GridFileName    = "Cadence unstructured mixed element"
+AUXDATA Misc            = "N/A"
+3       214944    0.00027869  0.730 3000000 3.90   1.04504660    0.05874388    -0.14494993 
+
+
+
