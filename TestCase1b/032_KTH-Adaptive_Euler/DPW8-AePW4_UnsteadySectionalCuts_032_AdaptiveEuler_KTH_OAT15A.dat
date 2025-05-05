@@ -15,7 +15,7 @@ DATASETAUXDATA GridId          = "Tet"
 DATASETAUXDATA Notes           = ""
 
 
-ZONE T="032.01 - ALPHA 3.5 - GRID CUSTOM01 - WING SECTION  1"
+ZONE T="032.01 - ALPHA 3.50 - GRID CUSTOM01 - WING SECTION  1"
 AUXDATA GridLevel       = "CUSTOM01"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3e6"

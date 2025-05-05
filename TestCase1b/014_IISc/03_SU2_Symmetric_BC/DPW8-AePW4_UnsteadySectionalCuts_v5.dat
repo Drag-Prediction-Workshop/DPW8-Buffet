@@ -84,10 +84,10 @@ AUXDATA Re              = "3e6"
 AUXDATA Alpha           = "3.5"
 AUXDATA Tstatic         = "271K"
 AUXDATA CLtotal         = "0.90710541"
-AUXDATA Eta             = -999
+AUXDATA Eta             = "-999"
 AUXDATA Dt              = "1e-6"
 AUXDATA CtuStart        = "628.39"
-AUXDATA CtuAvg          = -999
+AUXDATA CtuAvg          = "-999"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-5.cgns"             
 0.0933216            -0.0115              -0.0119463           0.40574609           -0.205835            0.00234446           0.00346203           3.65e-06            
 0.0925583            -0.0115              -0.0120103           0.40242739           -0.209405            0.00234718           0.00348421           3.67e-06            
@@ -1022,10 +1022,10 @@ AUXDATA Re              = "3e6"
 AUXDATA Alpha           = "3.6"
 AUXDATA Tstatic         = "271K"
 AUXDATA CLtotal         = "0.90101019"
-AUXDATA Eta             = -999
+AUXDATA Eta             = "-999"
 AUXDATA Dt              = "1e-6"
 AUXDATA CtuStart        = "628.39"
-AUXDATA CtuAvg          = -999
+AUXDATA CtuAvg          = "-999"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-5.cgns"            
 0.0159248            -0.0115              0.00963624           0.0418967            -1.41574             7.35e-06             0.00442441           1e-08               
 0.0166752            -0.0115              0.0097973            0.04259696           -1.41914             7.43e-06             0.00449385           2e-08               
@@ -1960,10 +1960,10 @@ AUXDATA Re              = "3e6"
 AUXDATA Alpha           = "3.9"
 AUXDATA Tstatic         = "271K"
 AUXDATA CLtotal         = "0.88391454"
-AUXDATA Eta             = -999
+AUXDATA Eta             = "-999"
 AUXDATA Dt              = "1e-6"
 AUXDATA CtuStart        = "628.39"
-AUXDATA CtuAvg          = -999
+AUXDATA CtuAvg          = "-999"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-5.cgns"          
 0.0159248            -0.0115              0.00963624           0.06923826           -1.43475             5.13e-06             0.00441153           1e-08               
 0.0151757            -0.0115              0.00946942           0.0659813            -1.43049             3.36e-06             0.00434884           2e-08               

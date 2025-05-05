@@ -74,9 +74,7 @@ DATASETAUXDATA SolverName      = "Fluent 2024 R2"
 DATASETAUXDATA BasicAlgorithm  = "URANS"
 DATASETAUXDATA TurbulenceModel = "SST-kw (with curvature correction)"
 DATASETAUXDATA GridId          = "Multiblock hexahedral"
-DATASETAUXDATA Notes           = "For GRID_SIZE: L3, ALPHA: 3.10 - Buffet was not observed, however, simulation was not run for long enough to achieve a completely stable flowfield.
-			          For GRID_SIZE: L2, ALPHA: 3.10 - Buffet was observed, but the simulation was not run for long enough to achieve a stable flow LCO.
-				  We recorded our surface data every 10 physical time-steps. The dt, CTU-start, and CTU-average are given based on our flow-field sampling frequency, not the physical time-step used in the CFD simulation which is an order of magnitude smaller."
+DATASETAUXDATA Notes           = "For GRID_SIZE: L3, ALPHA: 3.10 - Buffet was not observed, however, simulation was not run for long enough to achieve a completely stable flowfield. For GRID_SIZE: L2, ALPHA: 3.10 - Buffet was observed, but the simulation was not run for long enough to achieve a stable flow LCO. We recorded our surface data every 10 physical time-steps. The dt, CTU-start, and CTU-average are given based on our flow-field sampling frequency, not the physical time-step used in the CFD simulation which is an order of magnitude smaller."
 
 
 ZONE T="027.03 - ALPHA 3.10 - GRID 1"
