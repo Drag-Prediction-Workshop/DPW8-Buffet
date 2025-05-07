@@ -943,7 +943,6 @@ AUXDATA Dt              = "Time step per iteration (optional)"
 AUXDATA CtuStart        = "Convective Time Unit at Which Averaging Started"
 AUXDATA CtuAvg          = "Number of Convective Time Units in Time-Averaging Phase"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-1"
-		X (2.5)	Y	Z	X/C	CP	CF	CFX	CFY	CFZ
 6.56E+01	-1.32E+01	-999	2.85E-01	-2.00E-01	1.49E-03	1.49E-03	-1.74E-06	-999
 6.79E+01	-1.32E+01	-999	2.95E-01	-2.07E-01	1.48E-03	1.48E-03	9.88E-06	-999
 6.32E+01	-1.31E+01	-999	2.75E-01	-1.94E-01	1.50E-03	1.50E-03	-1.36E-05	-999

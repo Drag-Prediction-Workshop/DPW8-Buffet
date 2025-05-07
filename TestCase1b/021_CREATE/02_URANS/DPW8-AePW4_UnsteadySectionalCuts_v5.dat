@@ -1,6 +1,6 @@
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
-# DPW-8/AePW-4 SECTIONAL CUT SUBMITTAL FORM (Version 5 - October 16, 2024)
+# DPW-8/AePW-4 UNSTEADY SECTIONAL CUT SUBMITTAL FORM (Version 5 - October 16, 2024)
 #
 # Provide this file for steady-state or time-averaged sectional cuts
 #
@@ -20,9 +20,10 @@
 #                  Y:   Y coordinate
 #                  Z:   Z coordinate
 #                X/C:   Chord Fraction = (X - X_LE)/CHORD
-#                 CP:   Coefficient of pressure
-#                 CF:   Skin-friction coefficient at wall [tauw/(freestream dynamic pressure)]
-#        CFX,CFY,CFZ:   Components of skin-friction coefficient at wall
+#             CP_AVG:   Time-averaged coefficient of pressure
+#             CP_RMS:   Root mean square of instantaneous coefficient of pressure
+#             CF_AVG:   Time-averaged skin-friction coefficient at wall [tauw/(freestream dynamic pressure)]
+#             CF_RMS:   Root mean square of skin-friction coefficient at wall [tauw/(freestream dynamic pressure)]
 #                   
 #        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
 #
@@ -57,8 +58,9 @@
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 TITLE = "021.02"
-# Column       1     2     3     4       5      6      7       8       9
-VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP"   "CF"   "CFX"   "CFY"   "CFZ"
+# Column       1     2     3     4       5          6          7          8
+VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP_AVG"   "CP_RMS"   "CF_AVG"   "CF_RMS"
+
 
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
