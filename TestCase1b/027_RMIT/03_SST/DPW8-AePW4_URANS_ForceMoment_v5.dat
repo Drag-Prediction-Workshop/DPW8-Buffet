@@ -89,8 +89,7 @@ DATASETAUXDATA SolverName      = "Fluent 2024 R2"
 DATASETAUXDATA BasicAlgorithm  = "URANS"
 DATASETAUXDATA TurbulenceModel = "SST-kw (with curvature correction)"
 DATASETAUXDATA GridId          = "Multiblock hexahedral"
-DATASETAUXDATA Notes           = "For GRID_SIZE: L3, ALPHA: 3.10 - Buffet was not observed, however, simulation was not run for long enough to achieve a completely stable flowfield.
-			          For GRID_SIZE: L2, ALPHA: 3.10 - Buffet was observed, but the simulation was not run for long enough to achieve a stable flow LCO."
+DATASETAUXDATA Notes           = "For GRID_SIZE: L3, ALPHA: 3.10 - Buffet was not observed, however, simulation was not run for long enough to achieve a completely stable flowfield. For GRID_SIZE: L2, ALPHA: 3.10 - Buffet was observed, but the simulation was not run for long enough to achieve a stable flow LCO."
 
 
 #-------------------------------------------------------------------------------
@@ -101,7 +100,7 @@ ZONE T="027.03 GRID LEVEL 1"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "5e-6s"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Structured_Level-1"
-AUXDATA Misc            = ""
+AUXDATA Misc            = " "
              1             151003    0.00035    0.7300   3000000.00  3.10  0.894745842   0.0339963695  -0.116914345   0.895039441    0.034049076   0.117105258
              1             151003    0.00035    0.7300   3000000.00  3.25  0.892347409   0.0361528424  -0.115058598   0.893293041    0.036309304   0.115646630	
              1             151003    0.00035    0.7300   3000000.00  3.40  0.891999029   0.0384790587  -0.113874218   0.893599314    0.038725211   0.114823913	

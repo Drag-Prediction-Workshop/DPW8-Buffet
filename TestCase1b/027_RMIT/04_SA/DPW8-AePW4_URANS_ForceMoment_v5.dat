@@ -80,7 +80,7 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_A
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
-DATASETAUXDATA ParticipantID   = "027.03"
+DATASETAUXDATA ParticipantID   = "027.04"
 DATASETAUXDATA SubmissionDate  = "18/03/2025"
 DATASETAUXDATA Name            = "Michael Candon, Truman Gerner"
 DATASETAUXDATA Email           = "candon.michael@rmit.edu.au, s4134495@student.rmit.edu.au"
@@ -89,8 +89,7 @@ DATASETAUXDATA SolverName      = "Fluent 2024 R2"
 DATASETAUXDATA BasicAlgorithm  = "URANS"
 DATASETAUXDATA TurbulenceModel = "SA (with curvature correction)"
 DATASETAUXDATA GridId          = "Multiblock hexahedral"
-DATASETAUXDATA Notes           = "We recorded our surface data every 10 physical time-steps. The dt, CTU-start, and CTU-average are given based on our flow-field sampling frequency, not the physical time-step used in the CFD simulation which is an order of magnitude smaller. The power spectrum is computed using pressure coefficient, not pressure.
-				  For PSD, coefficient or pressure was used instead of pressure data."
+DATASETAUXDATA Notes           = "We recorded our surface data every 10 physical time-steps. The dt, CTU-start, and CTU-average are given based on our flow-field sampling frequency, not the physical time-step used in the CFD simulation which is an order of magnitude smaller. The power spectrum is computed using pressure coefficient, not pressure. For PSD, coefficient or pressure was used instead of pressure data."
 
 
 #-------------------------------------------------------------------------------
