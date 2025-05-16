@@ -1,6 +1,6 @@
 TITLE = "023.01"
 #Column       1     2     3     4       5          6          7          8
-VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP_AVG"   "CP_RMS"   "CF_AVG"   "CF_RMS" 
+VARIABLES =   "X"   "Y"   "Z"   "X/C"   "CP_AVG"   "CF_RMS"   "CF_AVG"   "CP_RMS" 
 
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
