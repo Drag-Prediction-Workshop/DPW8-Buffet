@@ -13,7 +13,7 @@ DATASETAUXDATA TurbulenceModel = "SAneg"
 DATASETAUXDATA GridId          = "Multiblock"
 DATASETAUXDATA Notes           = "Upwind/Centered Blending Method 2"
 
-ZONE T = "005.04 - ALPHA 1.36 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 1.36 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -1332,7 +1332,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 1.21870956e-01 9.62867748e-03 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 1.22222452e-01 1.61668231e-02 999 999
 
-ZONE T = "005.04 - ALPHA 1.50 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 1.50 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -2651,7 +2651,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 1.19892925e-01 9.32365168e-03 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 1.20281591e-01 1.56478144e-02 999 999
 
-ZONE T = "005.04 - ALPHA 2.50 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 2.50 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -3970,7 +3970,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 8.60280785e-02 5.01178514e-03 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 8.71245643e-02 7.05657500e-03 999 999
 
-ZONE T = "005.04 - ALPHA 3.00 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.00 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -5289,7 +5289,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 4.14621568e-02 4.50944030e-02 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 4.28257899e-02 4.49070703e-02 999 999
 
-ZONE T = "005.04 - ALPHA 3.10 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.10 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -6608,7 +6608,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 3.13137998e-02 4.90565120e-02 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 3.26306167e-02 4.88251128e-02 999 999
 
-ZONE T = "005.04 - ALPHA 3.25 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.25 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -7927,7 +7927,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 1.24138972e-02 5.57272800e-02 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 1.33406767e-02 5.55677745e-02 999 999
 
-ZONE T = "005.04 - ALPHA 3.40 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.40 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -9246,7 +9246,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 -1.17740548e-02 8.05923701e-02 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 -1.05595625e-02 8.09629911e-02 999 999
 
-ZONE T = "005.04 - ALPHA 3.50 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.50 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -10565,7 +10565,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 -2.43304367e-02 9.20681786e-02 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 -2.30418970e-02 9.23598367e-02 999 999
 
-ZONE T = "005.04 - ALPHA 3.60 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.60 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
@@ -11884,7 +11884,7 @@ AUXDATA Misc            = "Grid Extruded 0.2 chord with 145 points in span"
 2.2955e-01 2.4286e-17 6.6329e-04 9.9804e-01 -3.92250875e-02 1.07204572e-01 999 999
 2.3000e-01 2.4286e-17 5.7499e-04 1.0000e+00 -3.76792871e-02 1.07509844e-01 999 999
 
-ZONE T = "005.04 - ALPHA 3.90 - GRID 1 - Wing Section 1"
+ZONE T = "005.04 - ALPHA 3.90 - GRID 1 - WING SECTION 1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3.0e+6"
