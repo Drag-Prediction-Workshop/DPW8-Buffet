@@ -1,0 +1,278 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "013.11"
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12            
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS"     
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "013"
+DATASETAUXDATA SubmissionDate  = "2024-11-05"
+DATASETAUXDATA Name            = "Hadar Ben-Gida"
+DATASETAUXDATA Email           = "bengida@technion.ac.il"
+DATASETAUXDATA Institution     = "Technion - Israel Institute of Technology"
+DATASETAUXDATA SolverName      = "SU2 v8.0.1"
+DATASETAUXDATA BasicAlgorithm  = "URANS"
+DATASETAUXDATA TurbulenceModel = "SA-EDW-MC-QCR"
+DATASETAUXDATA GridId          = "Cadence supplied Unstructured Grids & O-type home-made Structured Grids"
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T="013.11 GRID LEVEL 1"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-1"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.00 0.93790140 0.03458652 -0.12570720 0.00000000 0.00000000 0.00000000
+1 47187 1 0.73 3000000 3.10 0.93369303 0.03577026 -0.12334804 0.00000018 0.00000001 0.00000005
+1 47187 1 0.73 3000000 3.25 0.85919119 0.03875462 -0.11805156 0.14247614 0.00842883 0.03228990
+1 47187 1 0.73 3000000 3.40 0.84943892 0.04135001 -0.11726876 0.15991762 0.00943273 0.03457150
+1 47187 1 0.73 3000000 3.50 0.84593428 0.04312051 -0.11712332 0.16948696 0.01008996 0.03578124
+1 47187 1 0.73 3000000 3.60 0.84515175 0.04501585 -0.11732399 0.17624601 0.01042554 0.03616990
+1 47187 1 0.73 3000000 3.90 0.84661158 0.05073202 -0.11824646 0.19180335 0.01166717 0.03709012
+
+
+ZONE T="013.11 GRID LEVEL 2"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-2"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+2 89616 1 0.73 3000000 3.00 0.89786901 0.03449326 -0.12262594 0.09580636 0.00653232 0.02561948
+2 89616 1 0.73 3000000 3.10 0.88851914 0.03628470 -0.12163981 0.11330401 0.00750556 0.02890367
+2 89616 1 0.73 3000000 3.25 0.87515562 0.03877897 -0.11999565 0.13470327 0.00873535 0.03248003
+2 89616 1 0.73 3000000 3.40 0.86661054 0.04143067 -0.11929682 0.15161519 0.00974241 0.03484647
+2 89616 1 0.73 3000000 3.50 0.86033778 0.04308247 -0.11861675 0.16166496 0.01034395 0.03608675
+
+
+ZONE T="013.11 GRID LEVEL 1"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-1"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.00 0.96138535 0.03658930 -0.13376960 0.02462873 0.00210435 0.00747778
+1 48360 1 0.73 3000000 3.10 0.94612277 0.03785481 -0.13044205 0.05739537 0.00474491 0.01684350
+1 48360 1 0.73 3000000 3.25 0.93184605 0.04007386 -0.12732425 0.08426940 0.00672858 0.02345460
+1 48360 1 0.73 3000000 3.40 0.92183033 0.04249205 -0.12535862 0.10470861 0.00816718 0.02779877
+1 48360 1 0.73 3000000 3.50 0.91587813 0.04410357 -0.12424898 0.11634430 0.00899043 0.03002020
+1 48360 1 0.73 3000000 3.60 0.91009318 0.04570290 -0.12320335 0.12712615 0.00976292 0.03193652
+1 48360 1 0.73 3000000 3.90 0.89582035 0.05067120 -0.12120693 0.15482005 0.01171186 0.03594964
+
+
+ZONE T="013.11 GRID LEVEL 2"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-2"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+2 179200 1 0.73 3000000 3.00 0.95550102 0.03636782 -0.13237886 0.04893728 0.00412579 0.01453919
+2 179200 1 0.73 3000000 3.10 0.94794824 0.03789769 -0.13045708 0.06592293 0.00544741 0.01899973
+2 179200 1 0.73 3000000 3.25 0.93909287 0.04026896 -0.12823586 0.08576832 0.00697709 0.02375311
+2 179200 1 0.73 3000000 3.40 0.93166411 0.04268154 -0.12641832 0.10202766 0.00822094 0.02724914
+2 179200 1 0.73 3000000 3.50 0.92723535 0.04430393 -0.12538149 0.11160191 0.00895588 0.02913043
+2 179200 1 0.73 3000000 3.60 0.92431837 0.04600320 -0.12474918 0.12034631 0.00963113 0.03072030
+2 179200 1 0.73 3000000 3.90 0.91381015 0.05101698 -0.12281214 0.14391122 0.01145623 0.03441784
+
+
+
+
+ZONE T="013.11 ALPHA 3.00"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.00 0.93790140 0.03458652 0.12570720 0.00000000 0.00000000 0.00000000
+2 89616 1 0.73 3000000 3.00 0.89786901 0.03449326 0.12262594 0.09580636 0.00653232 0.02561948
+
+
+ZONE T="013.11 ALPHA 3.10"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.10 0.93369303 0.03577026 0.12334804 0.00000018 0.00000001 0.00000005
+2 89616 1 0.73 3000000 3.10 0.88851914 0.03628470 0.12163981 0.11330401 0.00750556 0.02890367
+
+
+ZONE T="013.11 ALPHA 3.25"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.25 0.85919119 0.03875462 0.11805156 0.14247614 0.00842883 0.03228990
+2 89616 1 0.73 3000000 3.25 0.87515562 0.03877897 0.11999565 0.13470327 0.00873535 0.03248003
+
+
+ZONE T="013.11 ALPHA 3.40"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.40 0.84943892 0.04135001 0.11726876 0.15991762 0.00943273 0.03457150
+2 89616 1 0.73 3000000 3.40 0.86661054 0.04143067 0.11929682 0.15161519 0.00974241 0.03484647
+
+
+ZONE T="013.11 ALPHA 3.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.50 0.84593428 0.04312051 0.11712332 0.16948696 0.01008996 0.03578124
+2 89616 1 0.73 3000000 3.50 0.86033778 0.04308247 0.11861675 0.16166496 0.01034395 0.03608675
+
+
+ZONE T="013.11 ALPHA 3.60"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-1"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.60 0.84515175 0.04501585 0.11732399 0.17624601 0.01042554 0.03616990
+
+
+ZONE T="013.11 ALPHA 3.90"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-1"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 47187 1 0.73 3000000 3.90 0.84661158 0.05073202 0.11824646 0.19180335 0.01166717 0.03709012
+
+
+ZONE T="013.11 ALPHA 3.00"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.00 0.96138535 0.03658930 0.13376960 0.02462873 0.00210435 0.00747778
+2 179200 1 0.73 3000000 3.00 0.95550102 0.03636782 0.13237886 0.04893728 0.00412579 0.01453919
+
+
+ZONE T="013.11 ALPHA 3.10"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.10 0.94612277 0.03785481 0.13044205 0.05739537 0.00474491 0.01684350
+2 179200 1 0.73 3000000 3.10 0.94794824 0.03789769 0.13045708 0.06592293 0.00544741 0.01899973
+
+
+ZONE T="013.11 ALPHA 3.25"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.25 0.93184605 0.04007386 0.12732425 0.08426940 0.00672858 0.02345460
+2 179200 1 0.73 3000000 3.25 0.93909287 0.04026896 0.12823586 0.08576832 0.00697709 0.02375311
+
+
+ZONE T="013.11 ALPHA 3.40"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.40 0.92183033 0.04249205 0.12535862 0.10470861 0.00816718 0.02779877
+2 179200 1 0.73 3000000 3.40 0.93166411 0.04268154 0.12641832 0.10202766 0.00822094 0.02724914
+
+
+ZONE T="013.11 ALPHA 3.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.50 0.91587813 0.04410357 0.12424898 0.11634430 0.00899043 0.03002020
+2 179200 1 0.73 3000000 3.50 0.92723535 0.04430393 0.12538149 0.11160191 0.00895588 0.02913043
+
+
+ZONE T="013.11 ALPHA 3.60"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.60 0.91009318 0.04570290 0.12320335 0.12712615 0.00976292 0.03193652
+2 179200 1 0.73 3000000 3.60 0.92431837 0.04600320 0.12474918 0.12034631 0.00963113 0.03072030
+
+
+ZONE T="013.11 ALPHA 3.90"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.000000e-05"
+AUXDATA GridFileName    = "O-type_structured_grid_own_made-Level-[1-2]"
+AUXDATA Misc            = "SA-EDWARDS-COMPRESSIBILITY-QCR, JST convective scheme with artificial dissipation coefficients (0.5,0.02)"
+1 48360 1 0.73 3000000 3.90 0.89582035 0.05067120 0.12120693 0.15482005 0.01171186 0.03594964
+2 179200 1 0.73 3000000 3.90 0.91381015 0.05101698 0.12281214 0.14391122 0.01145623 0.03441784
+
+
