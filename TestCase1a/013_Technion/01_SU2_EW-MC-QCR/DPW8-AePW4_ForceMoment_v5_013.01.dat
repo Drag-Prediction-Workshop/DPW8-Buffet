@@ -88,7 +88,7 @@ DATASETAUXDATA Email           = "bengida@technion.ac.il"
 DATASETAUXDATA Institution     = "Technion - Israel Institute of Technology"
 DATASETAUXDATA SolverName      = "SU2 v8.0.1"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
-DATASETAUXDATA TurbulenceModel = "SA-EDW-MC"
+DATASETAUXDATA TurbulenceModel = "SA-EDW-MC-QCR"
 DATASETAUXDATA GridId          = "Cadence supplied Unstructured Grids & O-type home-made Structured Grids"
 DATASETAUXDATA Notes           = ""
 
