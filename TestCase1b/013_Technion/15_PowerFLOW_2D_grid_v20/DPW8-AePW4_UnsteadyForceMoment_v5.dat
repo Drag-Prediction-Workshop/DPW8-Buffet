@@ -1,0 +1,305 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "013.15"
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12            
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS"     
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "013"
+DATASETAUXDATA SubmissionDate  = "2024-11-05"
+DATASETAUXDATA Name            = "Hadar Ben-Gida"
+DATASETAUXDATA Email           = "bengida@technion.ac.il"
+DATASETAUXDATA Institution     = "Technion - Israel Institute of Technology"
+DATASETAUXDATA SolverName      = "PowerFLOW 2025.1"
+DATASETAUXDATA BasicAlgorithm  = "LBM/VLES"
+DATASETAUXDATA TurbulenceModel = "k-epsilon"
+DATASETAUXDATA GridId          = "Cartesian BLM grid"
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T="013.15 GRID LEVEL 1 (resolution 500)"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res500"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 1.36 0.76988328 0.01914765 -0.13855752 0.00371810 0.00016623 0.00028524
+1 105703 1 0.73 3000000 1.50 0.79685269 0.02027099 -0.13916503 0.00355980 0.00016767 0.00030785
+1 105703 1 0.73 3000000 2.50 0.93638369 0.03298765 -0.14217390 0.00264251 0.00018259 0.00026407
+1 105703 1 0.73 3000000 3.00 0.96438755 0.04022893 -0.13828587 0.00153206 0.00019874 0.00039888
+1 105703 1 0.73 3000000 3.10 0.96381997 0.04148274 -0.13642566 0.00635569 0.00055143 0.00194051
+1 105703 1 0.73 3000000 3.25 0.95387951 0.04316530 -0.13243587 0.04010334 0.00334126 0.01206136
+1 105703 1 0.73 3000000 3.40 0.94072026 0.04534502 -0.12942629 0.06923047 0.00532596 0.01943780
+1 105703 1 0.73 3000000 3.50 0.94118270 0.04749526 -0.12947355 0.07702386 0.00558324 0.02040807
+1 105703 1 0.73 3000000 3.60 0.94728745 0.04973395 -0.13034627 0.07774185 0.00574170 0.01983496
+1 105703 1 0.73 3000000 3.90 0.96312670 0.05609491 -0.13176550 0.07265841 0.00639195 0.01773931
+
+
+ZONE T="013.15 GRID LEVEL 2 (resolution 1000)"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "2.287000e-07"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res1000"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+2 404244 1 0.73 3000000 1.36 0.75881070 0.01779177 -0.13509719 0.00776349 0.00019020 0.00043773
+2 404244 1 0.73 3000000 1.50 0.78718704 0.01889595 -0.13576287 0.00778419 0.00016491 0.00053297
+2 404244 1 0.73 3000000 2.50 0.93052219 0.03180232 -0.13925601 0.00329195 0.00017825 0.00027021
+2 404244 1 0.73 3000000 3.00 0.93736636 0.03829382 -0.13155793 0.03712616 0.00275375 0.01078051
+2 404244 1 0.73 3000000 3.10 0.91884602 0.03956763 -0.12817264 0.06616391 0.00476153 0.01853801
+2 404244 1 0.73 3000000 3.25 0.91627969 0.04273414 -0.12795517 0.07919355 0.00551187 0.02046173
+2 404244 1 0.73 3000000 3.40 0.92849412 0.04619572 -0.12969491 0.07619515 0.00602696 0.01913106
+2 404244 1 0.73 3000000 3.50 0.93801606 0.04838158 -0.13077783 0.07042105 0.00634079 0.01801451
+2 404244 1 0.73 3000000 3.60 0.94361283 0.05040463 -0.13124242 0.06780829 0.00677101 0.01779934
+2 404244 1 0.73 3000000 3.90 0.94750489 0.05607264 -0.13059644 0.06651875 0.00806820 0.01877548
+
+
+ZONE T="013.15 GRID LEVEL 3 (resolution 1500)"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.525000e-07"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res1500"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+3 896131 1 0.73 3000000 1.36 0.74788141 0.01705368 -0.13268429 0.00838667 0.00020765 0.00045357
+3 896131 1 0.73 3000000 1.50 0.77632278 0.01812485 -0.13326660 0.00841382 0.00018024 0.00055890
+3 896131 1 0.73 3000000 2.50 0.91700834 0.03066117 -0.13575322 0.00311087 0.00019545 0.00033745
+3 896131 1 0.73 3000000 3.00 0.90774469 0.03687828 -0.12609374 0.05642250 0.00407900 0.01618177
+3 896131 1 0.73 3000000 3.10 0.89577954 0.03846889 -0.12392579 0.07536427 0.00529892 0.02069442
+3 896131 1 0.73 3000000 3.25 0.90392617 0.04174736 -0.12509129 0.07814303 0.00573066 0.02039415
+3 896131 1 0.73 3000000 3.40 0.91232129 0.04485680 -0.12582621 0.07662899 0.00634032 0.01976424
+3 896131 1 0.73 3000000 3.50 0.91905713 0.04677303 -0.12625790 0.07323030 0.00666377 0.01918433
+3 896131 1 0.73 3000000 3.60 0.92301188 0.04862363 -0.12618835 0.07080878 0.00703394 0.01900509
+3 896131 1 0.73 3000000 3.90 0.92139206 0.05358225 -0.12395394 0.07358196 0.00854320 0.02133209
+
+
+ZONE T="013.15 GRID LEVEL 4 (resolution 1750)"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.307000e-07"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res1750"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+4 1257927 1 0.73 3000000 1.36 0.75414231 0.01704632 -0.13405711 0.00854279 0.00020569 0.00050320
+4 1257927 1 0.73 3000000 1.50 0.78261290 0.01815566 -0.13472740 0.00854507 0.00018038 0.00061334
+4 1257927 1 0.73 3000000 2.50 0.91842967 0.03078291 -0.13675012 0.00276650 0.00020485 0.00039014
+4 1257927 1 0.73 3000000 3.00 0.89233300 0.03715054 -0.12571843 0.07386863 0.00510741 0.02034672
+4 1257927 1 0.73 3000000 3.10 0.89427374 0.03934219 -0.12609829 0.07928190 0.00549600 0.02081821
+4 1257927 1 0.73 3000000 3.25 0.90296757 0.04258538 -0.12738815 0.08041585 0.00620849 0.02056629
+4 1257927 1 0.73 3000000 3.40 0.91189675 0.04568008 -0.12824901 0.07731352 0.00700778 0.02035853
+4 1257927 1 0.73 3000000 3.50 0.91766425 0.04751132 -0.12840262 0.07341033 0.00745920 0.02015094
+4 1257927 1 0.73 3000000 3.60 0.92183296 0.04935667 -0.12841512 0.06937757 0.00784225 0.01991165
+4 1257927 1 0.73 3000000 3.90 0.90651188 0.05473271 -0.12653642 0.10103323 0.01083223 0.02869996
+
+
+ZONE T="013.15 GRID LEVEL 5 (resolution 2000)"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "1.144000e-07"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res2000"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+5 1581336 1 0.73 3000000 1.36 0.73766732 0.01662818 -0.13067390 0.00822167 0.00020590 0.00044099
+5 1581336 1 0.73 3000000 1.50 0.76596765 0.01764695 -0.13112307 0.00824943 0.00018020 0.00054565
+5 1581336 1 0.73 3000000 2.50 0.90547194 0.02973551 -0.13269485 0.00280252 0.00020386 0.00036757
+5 1581336 1 0.73 3000000 3.00 0.87779194 0.03598347 -0.12140688 0.07387661 0.00500751 0.02023222
+5 1581336 1 0.73 3000000 3.10 0.87658110 0.03815278 -0.12166339 0.08201993 0.00548760 0.02122346
+5 1581336 1 0.73 3000000 3.25 0.88455686 0.04152957 -0.12311626 0.08459622 0.00630181 0.02120993
+5 1581336 1 0.73 3000000 3.40 0.89659575 0.04473090 -0.12463060 0.08011147 0.00720549 0.02101852
+5 1581336 1 0.73 3000000 3.50 0.90182345 0.04664222 -0.12491655 0.07731289 0.00777902 0.02116492
+5 1581336 1 0.73 3000000 3.60 0.90575569 0.04827904 -0.12444200 0.07335602 0.00837424 0.02157423
+5 1581336 1 0.73 3000000 3.90 0.89725329 0.05338608 -0.12254739 0.08971860 0.01086019 0.02735482
+
+
+
+
+ZONE T="013.15 ALPHA 1.36"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 1.36 0.76988328 0.01914765 0.13855752 0.00371810 0.00016623 0.00028524
+2 404244 1 0.73 3000000 1.36 0.75881070 0.01779177 0.13509719 0.00776349 0.00019020 0.00043773
+3 896131 1 0.73 3000000 1.36 0.74788141 0.01705368 0.13268429 0.00838667 0.00020765 0.00045357
+4 1257927 1 0.73 3000000 1.36 0.75414231 0.01704632 0.13405711 0.00854279 0.00020569 0.00050320
+5 1581336 1 0.73 3000000 1.36 0.73766732 0.01662818 0.13067390 0.00822167 0.00020590 0.00044099
+
+
+ZONE T="013.15 ALPHA 1.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 1.50 0.79685269 0.02027099 0.13916503 0.00355980 0.00016767 0.00030785
+2 404244 1 0.73 3000000 1.50 0.78718704 0.01889595 0.13576287 0.00778419 0.00016491 0.00053297
+3 896131 1 0.73 3000000 1.50 0.77632278 0.01812485 0.13326660 0.00841382 0.00018024 0.00055890
+4 1257927 1 0.73 3000000 1.50 0.78261290 0.01815566 0.13472740 0.00854507 0.00018038 0.00061334
+5 1581336 1 0.73 3000000 1.50 0.76596765 0.01764695 0.13112307 0.00824943 0.00018020 0.00054565
+
+
+ZONE T="013.15 ALPHA 2.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 2.50 0.93638369 0.03298765 0.14217390 0.00264251 0.00018259 0.00026407
+2 404244 1 0.73 3000000 2.50 0.93052219 0.03180232 0.13925601 0.00329195 0.00017825 0.00027021
+3 896131 1 0.73 3000000 2.50 0.91700834 0.03066117 0.13575322 0.00311087 0.00019545 0.00033745
+4 1257927 1 0.73 3000000 2.50 0.91842967 0.03078291 0.13675012 0.00276650 0.00020485 0.00039014
+5 1581336 1 0.73 3000000 2.50 0.90547194 0.02973551 0.13269485 0.00280252 0.00020386 0.00036757
+
+
+ZONE T="013.15 ALPHA 3.00"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.00 0.96438755 0.04022893 0.13828587 0.00153206 0.00019874 0.00039888
+2 404244 1 0.73 3000000 3.00 0.93736636 0.03829382 0.13155793 0.03712616 0.00275375 0.01078051
+3 896131 1 0.73 3000000 3.00 0.90774469 0.03687828 0.12609374 0.05642250 0.00407900 0.01618177
+4 1257927 1 0.73 3000000 3.00 0.89233300 0.03715054 0.12571843 0.07386863 0.00510741 0.02034672
+5 1581336 1 0.73 3000000 3.00 0.87779194 0.03598347 0.12140688 0.07387661 0.00500751 0.02023222
+
+
+ZONE T="013.15 ALPHA 3.10"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.10 0.96381997 0.04148274 0.13642566 0.00635569 0.00055143 0.00194051
+2 404244 1 0.73 3000000 3.10 0.91884602 0.03956763 0.12817264 0.06616391 0.00476153 0.01853801
+3 896131 1 0.73 3000000 3.10 0.89577954 0.03846889 0.12392579 0.07536427 0.00529892 0.02069442
+4 1257927 1 0.73 3000000 3.10 0.89427374 0.03934219 0.12609829 0.07928190 0.00549600 0.02081821
+5 1581336 1 0.73 3000000 3.10 0.87658110 0.03815278 0.12166339 0.08201993 0.00548760 0.02122346
+
+
+ZONE T="013.15 ALPHA 3.25"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.25 0.95387951 0.04316530 0.13243587 0.04010334 0.00334126 0.01206136
+2 404244 1 0.73 3000000 3.25 0.91627969 0.04273414 0.12795517 0.07919355 0.00551187 0.02046173
+3 896131 1 0.73 3000000 3.25 0.90392617 0.04174736 0.12509129 0.07814303 0.00573066 0.02039415
+4 1257927 1 0.73 3000000 3.25 0.90296757 0.04258538 0.12738815 0.08041585 0.00620849 0.02056629
+5 1581336 1 0.73 3000000 3.25 0.88455686 0.04152957 0.12311626 0.08459622 0.00630181 0.02120993
+
+
+ZONE T="013.15 ALPHA 3.40"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.40 0.94072026 0.04534502 0.12942629 0.06923047 0.00532596 0.01943780
+2 404244 1 0.73 3000000 3.40 0.92849412 0.04619572 0.12969491 0.07619515 0.00602696 0.01913106
+3 896131 1 0.73 3000000 3.40 0.91232129 0.04485680 0.12582621 0.07662899 0.00634032 0.01976424
+4 1257927 1 0.73 3000000 3.40 0.91189675 0.04568008 0.12824901 0.07731352 0.00700778 0.02035853
+5 1581336 1 0.73 3000000 3.40 0.89659575 0.04473090 0.12463060 0.08011147 0.00720549 0.02101852
+
+
+ZONE T="013.15 ALPHA 3.50"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.50 0.94118270 0.04749526 0.12947355 0.07702386 0.00558324 0.02040807
+2 404244 1 0.73 3000000 3.50 0.93801606 0.04838158 0.13077783 0.07042105 0.00634079 0.01801451
+3 896131 1 0.73 3000000 3.50 0.91905713 0.04677303 0.12625790 0.07323030 0.00666377 0.01918433
+4 1257927 1 0.73 3000000 3.50 0.91766425 0.04751132 0.12840262 0.07341033 0.00745920 0.02015094
+5 1581336 1 0.73 3000000 3.50 0.90182345 0.04664222 0.12491655 0.07731289 0.00777902 0.02116492
+
+
+ZONE T="013.15 ALPHA 3.60"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.60 0.94728745 0.04973395 0.13034627 0.07774185 0.00574170 0.01983496
+2 404244 1 0.73 3000000 3.60 0.94361283 0.05040463 0.13124242 0.06780829 0.00677101 0.01779934
+3 896131 1 0.73 3000000 3.60 0.92301188 0.04862363 0.12618835 0.07080878 0.00703394 0.01900509
+4 1257927 1 0.73 3000000 3.60 0.92183296 0.04935667 0.12841512 0.06937757 0.00784225 0.01991165
+5 1581336 1 0.73 3000000 3.60 0.90575569 0.04827904 0.12444200 0.07335602 0.00837424 0.02157423
+
+
+ZONE T="013.15 ALPHA 3.90"
+AUXDATA Tstatic         = "271 K"
+AUXDATA Deltat          = "4.575000e-07, 2.287000e-07, 1.525000e-07, 1.307000e-07, 1.144000e-07, "
+AUXDATA GridFileName    = "ONERA-OAT15A_Cartesian_LBM_grid-res[1-5]"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the airfoil chord length."
+1 105703 1 0.73 3000000 3.90 0.96312670 0.05609491 0.13176550 0.07265841 0.00639195 0.01773931
+2 404244 1 0.73 3000000 3.90 0.94750489 0.05607264 0.13059644 0.06651875 0.00806820 0.01877548
+3 896131 1 0.73 3000000 3.90 0.92139206 0.05358225 0.12395394 0.07358196 0.00854320 0.02133209
+4 1257927 1 0.73 3000000 3.90 0.90651188 0.05473271 0.12653642 0.10103323 0.01083223 0.02869996
+5 1581336 1 0.73 3000000 3.90 0.89725329 0.05338608 0.12254739 0.08971860 0.01086019 0.02735482
+
+
