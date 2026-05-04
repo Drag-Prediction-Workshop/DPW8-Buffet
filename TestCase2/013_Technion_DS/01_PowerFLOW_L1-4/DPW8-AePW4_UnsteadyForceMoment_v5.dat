@@ -100,28 +100,32 @@ DATASETAUXDATA Notes           = ""
 ZONE T="013.01 GRID LEVEL 1 (resolution hyper-coarse)"
 AUXDATA Tstatic         = "282.2 K"
 AUXDATA Deltat          = "3.678000e-07"
-AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_hyper-coarseAUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
+AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_hyper-coarse"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
 1 14347554 1 0.85 1515000 4.84 0.70068743 0.065705733 -0.05542741 0.00391922 0.00025407 0.00474088
 
 
 ZONE T="013.01 GRID LEVEL 2 (resolution extra-coarse)"
 AUXDATA Tstatic         = "282.2 K"
 AUXDATA Deltat          = "2.452000e-07"
-AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_extra-coarseAUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
+AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_extra-coarse"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
 2 33999512 1 0.85 1515000 4.84 0.71521991 0.065697529 -0.06854899 0.00261464 0.00022664 0.00300433
 
 
 ZONE T="013.01 GRID LEVEL 3 (resolution coarse)"
 AUXDATA Tstatic         = "282.2 K"
 AUXDATA Deltat          = "1.634000e-07"
-AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_coarseAUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
+AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_coarse"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
 3 93416453 1 0.85 1515000 4.84 0.71810383 0.065164159 -0.07162422 0.00234896 0.00019464 0.00265557
 
 
 ZONE T="013.01 GRID LEVEL 4 (resolution medium)"
 AUXDATA Tstatic         = "282.2 K"
 AUXDATA Deltat          = "1.090000e-07"
-AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_mediumAUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
+AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res_medium"
+AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
 4 283825969 1 0.85 1515000 1.22 0.28745776 0.027290725 0.02423684 0.00045101 0.00002544 0.00050181
 4 281294088 1 0.85 1515000 2.29 0.43008638 0.031910819 -0.01797495 0.00035982 0.00003735 0.00088307
 4 280978206 1 0.85 1515000 4.84 0.69327280 0.063588624 -0.04318497 0.00212523 0.00019070 0.00236015
