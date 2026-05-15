@@ -154,7 +154,7 @@ ZONE T="013.01 ALPHA 4.84"
 AUXDATA Tstatic         = "282.2 K"
 AUXDATA Deltat          = "1.090e-07, 1.634e-07, 2.452e-07, 3.678e-07"
 AUXDATA GridFileName    = "CRM_LBM_grid-v3p3-res[1-4]"
-AUXDATA Misc            = "Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
+AUXDATA Misc            = "Model scale meters. Mesh size count is in terms of mesh cells count. Resolution is given in terms of cells along the wing MAC."
 1 14347554 1 0.85 1515000 4.84 0.70068743 0.065705733 -0.05542741 0.00391922 0.00025407 0.00474088
 2 33999512 1 0.85 1515000 4.84 0.71521991 0.065697529 -0.06854899 0.00261464 0.00022664 0.00300433
 3 93416453 1 0.85 1515000 4.84 0.71810383 0.065164159 -0.07162422 0.00234896 0.00019464 0.00265557
