@@ -85,7 +85,7 @@ DATASETAUXDATA Institution     = "CREATE-AV"
 DATASETAUXDATA SolverName      = "Kestrel 12.11"
 DATASETAUXDATA BasicAlgorithm  = "URANS"
 DATASETAUXDATA TurbulenceModel = "SST-CC-RC-QCR2020"
-DATASETAUXDATA GridId          = "Helden Mixed Element"
+DATASETAUXDATA GridId          = "Cadence Mixed Element"
 DATASETAUXDATA Notes           = "Provided for lessons learned purposes"
 
 
