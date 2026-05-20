@@ -71,6 +71,18 @@ DATASETAUXDATA TurbulenceModel = "RSM Stress-Omega"
 DATASETAUXDATA GridId          = "Cadence"
 DATASETAUXDATA Notes           = "SHEAR FLOW CORRECTION OFF"
 
+ZONE T="027.05 - ETA 0.6 - XOC 0.7677 - ALPHA 4.84 - GRID LEVEL 3"
+AUXDATA GridLevel       = "3"
+AUXDATA Mach            = "0.85"
+AUXDATA Re              = "1.51e06"
+AUXDATA Alpha           = "4.84"
+AUXDATA CLtotal         = "0.72077254"
+AUXDATA Dt              = "2.64398e-6"
+AUXDATA CtuStart        = "30"
+AUXDATA CtuAvg          = "49.950"
+AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-3-2_16%_mm.pw"
+
+	000.000	000.000	000.000	0.000  0.000000 0.0000000 0.00000000 0.00000000	
 
 ZONE T="027.05 - ETA 0.6 - XOC 0.7677 - ALPHA 5.89 - GRID LEVEL 3"
 AUXDATA GridLevel       = "3"
