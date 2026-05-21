@@ -43,7 +43,7 @@ AUXDATA Misc            = "Different grid used for each alpha to match wing defl
 3 1010787717 9.928722e-07 0.85 1515000.0 4.84e+00 6.777799e-01 6.142752e-02 -3.444483e-02 4.408735e-03 3.286994e-04 4.801497e-03
 3 1010787717 9.928722e-07 0.85 1515000.0 5.89e+00 7.696600e-01 8.317342e-02 -4.029765e-02 1.099968e-02 1.316897e-03 1.240666e-02
 
-ZONE T="005.01 ALPHA - 1.22"
+ZONE T="005.01 ALPHA 1.22"
 AUXDATA Tstatic         = "282.219 K"
 AUXDATA Deltat          = "2.44682e-05 seconds"
 AUXDATA GridFileName    = "grid_R1_00_A1_22.x, grid_R1_00_A2_29.x, grid_R1_00_A4_84.x, grid_R1_00_A5_89.x"
@@ -52,7 +52,7 @@ AUXDATA Misc            = "Different grid used for each alpha to match wing defl
 2 346389024 2.027483e-06 0.85 1515000.0 1.22e+00 2.791883e-01 2.319434e-02 3.861381e-02 2.578967e-04 2.816670e-05 8.951877e-04
 3 1010787717 9.928722e-07 0.85 1515000.0 1.22e+00 2.797877e-01 2.316416e-02 3.807632e-02 2.504249e-04 2.475592e-05 8.888960e-04
 
-ZONE T="005.01 ALPHA - 2.29"
+ZONE T="005.01 ALPHA 2.29"
 AUXDATA Tstatic         = "282.219 K"
 AUXDATA Deltat          = "2.44682e-05 seconds"
 AUXDATA GridFileName    = "grid_R1_40_A1_22.x, grid_R1_40_A2_29.x, grid_R1_40_A4_84.x, grid_R1_40_A5_89.x"
@@ -61,7 +61,7 @@ AUXDATA Misc            = "Different grid used for each alpha to match wing defl
 2 346389024 2.027483e-06 0.85 1515000.0 2.29e+00 4.269673e-01 2.754160e-02 -3.742077e-03 3.270718e-04 3.067953e-05 1.165927e-03
 3 1010787717 9.928722e-07 0.85 1515000.0 2.29e+00 4.274123e-01 2.752371e-02 -3.964124e-03 2.420211e-04 2.487153e-05 8.698950e-04
 
-ZONE T="005.01 ALPHA - 4.84"
+ZONE T="005.01 ALPHA 4.84"
 AUXDATA Tstatic         = "282.219 K"
 AUXDATA Deltat          = "2.44682e-05 seconds"
 AUXDATA GridFileName    = "grid_R1_40_A1_22.x, grid_R1_40_A2_29.x, grid_R1_40_A4_84.x, grid_R1_40_A5_89.x"
@@ -70,7 +70,7 @@ AUXDATA Misc            = "Different grid used for each alpha to match wing defl
 2 346389024 2.027483e-06 0.85 1515000.0 4.84e+00 6.797264e-01 6.191446e-02 -3.239397e-02 4.045580e-03 3.014860e-04 4.717241e-03
 3 1010787717 9.928722e-07 0.85 1515000.0 4.84e+00 6.777799e-01 6.142752e-02 -3.444483e-02 4.408735e-03 3.286994e-04 4.801497e-03
 
-ZONE T="005.01 ALPHA - 5.89"
+ZONE T="005.01 ALPHA 5.89"
 AUXDATA Tstatic         = "282.219 K"
 AUXDATA Deltat          = "2.44682e-05 seconds"
 AUXDATA GridFileName    = "grid_R1_40_A1_22.x, grid_R1_40_A2_29.x, grid_R1_40_A4_84.x, grid_R1_40_A5_89.x"

@@ -97,14 +97,14 @@ DATASETAUXDATA Notes           = "Warm start (Restart from RANS solution), sub i
 #  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
 #-------------------------------------------------------------------------------
 
-ZONE T= "007.12 - Grid Level 1"
+ZONE T= "007.12 Grid Level 1"
 AUXDATA Tstatic         = "323 K"
 AUXDATA Deltat          = "4.2001171495729026e-07 sec"
 AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-1.b8.ugrid"
 AUXDATA Misc            = "-999"
 1 17380464 1.4903642429499163e-05 0.85 1520000 4.84 0.6345173791400246 0.06336653438800022 0.02317719496499978 0.0009252999863141101 9.23084460418712e-05 0.0016964198472429466
 
-ZONE T= "007.12 - ALPHA 4.84"
+ZONE T= "007.12 ALPHA 4.84"
 AUXDATA Tstatic         = "323 K"
 AUXDATA Deltat          = "4.2001171495729026e-07 sec"
 AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-1.b8.ugrid"
