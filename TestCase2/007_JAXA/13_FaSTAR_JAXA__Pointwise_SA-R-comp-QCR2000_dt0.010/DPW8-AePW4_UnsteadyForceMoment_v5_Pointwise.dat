@@ -1,0 +1,160 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "007.13"
+
+# Column     1             2            3           4       5      6        7          8          9         10        11        12       
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_AVG"   "CD_AVG"   "CM_AVG"  "CL_RMS"  "CD_RMS"  "CM_RMS"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "007"
+DATASETAUXDATA SubmissionDate  = "January 30th, 2026"
+DATASETAUXDATA Name            = "Andrea Sansica"
+DATASETAUXDATA Email           = "sansica.andrea@jaxa.jp"
+DATASETAUXDATA Institution     = "JAXA"
+DATASETAUXDATA SolverName      = "FaSTAR"
+DATASETAUXDATA BasicAlgorithm  = "URANS"
+DATASETAUXDATA TurbulenceModel = "SA-R(Crot=2)-comp-QCR2000"
+DATASETAUXDATA GridId          = "Hexahedra"
+DATASETAUXDATA Notes           = "Warm start (Restart from RANS solution), sub iterations=30, The turbulence equations are first-order accuracy. The CPU time corresponds to the statistics collection time only."
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+
+ZONE T= "007.13 - Grid LEVEL 1"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-1.b8.ugrid"
+AUXDATA Misc            = "-999"
+1 17380464 1.4903642429499163e-05 0.85 1520000 4.84 0.6299886480000013 0.06377085200999988 0.021134059069999975 0.002166754189356973 0.00025499159953606244 0.0028468895144995936
+
+
+ZONE T= "007.13 - Grid LEVEL 2"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-2.b8.ugrid"
+AUXDATA Misc            = "-999"
+2 49409994 7.426601698326934e-06 0.85 1520000 4.84 0.5500996393000022 0.054542712800000254 -0.2077175375000015 0.00038312011353557187 2.2464650902250593e-05 0.0015747597557068034
+
+
+ZONE T= "007.13 - Grid LEVEL 3"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoaX_buffet_deformed_Level-3.b8.ugrid, X=122,229,484,589"
+AUXDATA Misc            = "-999"
+3 103246449 4.543772556850687e-06 0.85 1520000 1.22 0.27809299999994014 0.022700913319995755 0.03654161370000081 5.984102102729594e-14 3.397907591424923e-08 7.711232067796845e-08
+3 103077084 4.54874841518411e-06 0.85 1520000 2.29 0.42800816329997915 0.027060500000003252 -0.005679392976999749 3.696391618763842e-07 3.2508717939805365e-15 1.08040767634274e-07
+3 104071653 4.5197217427577925e-06 0.85 1520000 4.84 0.5350490619000025 0.05645182386000034 -0.03713436712510991 0.010473696811253803 0.0011143831218565269 0.017204691202635902
+3 106589433 4.448264113241328e-06 0.85 1520000 5.89 0.5669968114999976 0.07362566243999959 -0.08423071480000023 0.008381400736068393 0.0008780658603756592 0.02093281148549759
+
+
+ZONE T= "007.13 - ALPHA 1.22"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa122_buffet_deformed_Level-3.b8.ugrid"
+AUXDATA Misc            = "-999"
+3 103246449 4.543772556850687e-06 0.85 1520000 1.22 0.27809299999994014 0.022700913319995755 0.03654161370000081 5.984102102729594e-14 3.397907591424923e-08 7.711232067796845e-08
+
+
+ZONE T= "007.13 - ALPHA 2.29"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa229_buffet_deformed_Level-3.b8.ugrid"
+AUXDATA Misc            = "-999"
+3 103077084 4.54874841518411e-06 0.85 1520000 2.29 0.42800816329997915 0.027060500000003252 -0.005679392976999749 3.696391618763842e-07 3.2508717939805365e-15 1.08040767634274e-07
+
+
+ZONE T= "007.13 - ALPHA 4.84"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa484_buffet_deformed_Level-X.b8.ugrid, X=1,2,3"
+AUXDATA Misc            = "-999"
+1 17380464 1.4903642429499163e-05 0.85 1520000 4.84 0.6299886480000013 0.06377085200999988 0.021134059069999975 0.002166754189356973 0.00025499159953606244 0.0028468895144995936
+2 49409994 7.426601698326934e-06 0.85 1520000 4.84 0.5500996393000022 0.054542712800000254 -0.2077175375000015 0.00038312011353557187 2.2464650902250593e-05 0.0015747597557068034
+3 104071653 4.5197217427577925e-06 0.85 1520000 4.84 0.5350490619000025 0.05645182386000034 -0.03713436712510991 0.010473696811253803 0.0011143831218565269 0.017204691202635902
+
+
+ZONE T= "007.13 - ALPHA 5.89"
+AUXDATA Tstatic         = "323 K"
+AUXDATA Deltat          = "4.200117149572903e-06 sec"
+AUXDATA GridFileName    = "wbh_aoa589_buffet_deformed_Level-3.b8.ugrid"
+AUXDATA Misc            = "-999"
+3 106589433 4.448264113241328e-06 0.85 1520000 5.89 0.5669968114999976 0.07362566243999959 -0.08423071480000023 0.008381400736068393 0.0008780658603756592 0.02093281148549759
+
+
