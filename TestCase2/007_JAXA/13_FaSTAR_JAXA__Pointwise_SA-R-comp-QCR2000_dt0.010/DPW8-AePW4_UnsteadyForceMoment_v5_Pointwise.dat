@@ -88,7 +88,7 @@ DATASETAUXDATA Institution     = "JAXA"
 DATASETAUXDATA SolverName      = "FaSTAR"
 DATASETAUXDATA BasicAlgorithm  = "URANS"
 DATASETAUXDATA TurbulenceModel = "SA-R(Crot=2)-comp-QCR2000"
-DATASETAUXDATA GridId          = "Hexahedra"
+DATASETAUXDATA GridId          = "Cadence"
 DATASETAUXDATA Notes           = "Warm start (Restart from RANS solution), sub iterations=30, The turbulence equations are first-order accuracy. The CPU time corresponds to the statistics collection time only."
 
 
