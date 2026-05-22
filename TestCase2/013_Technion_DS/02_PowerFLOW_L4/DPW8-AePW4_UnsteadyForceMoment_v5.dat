@@ -80,16 +80,16 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_A
 #---------------------------------------------------
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
-DATASETAUXDATA ParticipantID = "013"
-DATASETAUXDATA SubmissionDate = "2026-05-19"
-DATASETAUXDATA Name = "Rafael Vieira and Hadar Ben-Gida"
-DATASETAUXDATA Email = "rafael.vieira@3ds.com and bengida@technion.ac.il"
-DATASETAUXDATA Institution = "Dassault Systèmes and Technion - Israel Institute of Technology"
-DATASETAUXDATA SolverName = "PowerFLOW 6-2025-R2"
-DATASETAUXDATA BasicAlgorithm = "Lattice Boltzmann Method (LBM)"
+DATASETAUXDATA ParticipantID   = "013"
+DATASETAUXDATA SubmissionDate  = "2026-05-19"
+DATASETAUXDATA Name            = "Rafael Vieira and Hadar Ben-Gida"
+DATASETAUXDATA Email           = "rafael.vieira@3ds.com and bengida@technion.ac.il"
+DATASETAUXDATA Institution     = "Dassault Systèmes and Technion - Israel Institute of Technology"
+DATASETAUXDATA SolverName      = "PowerFLOW 6-2025-R2"
+DATASETAUXDATA BasicAlgorithm  = "Lattice Boltzmann Method (LBM)"
 DATASETAUXDATA TurbulenceModel = "LBM-VLES, k-e-based, adapted to LBM"
-DATASETAUXDATA GridId = "Cartesian (Custom)"
-DATASETAUXDATA Notes = "International System of Units (SI)"
+DATASETAUXDATA GridId          = "Cartesian (Custom)"
+DATASETAUXDATA Notes           = "International System of Units (SI)"
 
 #-------------------------------------------------------------------------------
 #  REQUIRED:  RESIDUAL DATA
