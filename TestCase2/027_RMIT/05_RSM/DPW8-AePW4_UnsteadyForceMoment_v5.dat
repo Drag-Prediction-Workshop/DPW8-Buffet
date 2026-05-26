@@ -81,8 +81,8 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_A
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
 DATASETAUXDATA ParticipantID   = "027.05"
-DATASETAUXDATA SubmissionDate  = "05/07/2026"
-DATASETAUXDATA Name            = "Michael Candon, Truman Gerner, Zev HOffman"
+DATASETAUXDATA SubmissionDate  = "05/26/2026"
+DATASETAUXDATA Name            = "Michael Candon, Truman Gerner, Zev Hoffman"
 DATASETAUXDATA Email           = "candon.michael@rmit.edu.au, s4134495@student.rmit.edu.au, s3785456@student.rmit.edu.au"
 DATASETAUXDATA Institution     = "RMIT"
 DATASETAUXDATA SolverName      = "Fluent 2025 R2"
@@ -101,7 +101,7 @@ AUXDATA Tstatic         = "282"
 AUXDATA Deltat          = "2.64398e-6"
 AUXDATA GridFileName    = "wbh_aoa589_buffet_deformed_Level-3-2_16%_mm.pw"
 AUXDATA Misc            = "SHEAR FLOW CORRECTION OFF"
-             3             104071653    0.000004520    0.85   1.51e06  4.84  0.00000000   0.00000000  0.000000000   0.00000000    0.00000000   0.00000000  
+             3             106589433    0.000004520    0.85   1.51e06  4.84  0.70129036   0.06166930   0.04558441   0.00007381    0.00001340   0.00016422  
              3             106589433    0.000004448    0.85   1.51e06  5.89  0.72080638   0.07777941  -0.01139462   0.00557771    0.00038300   0.00833301    
     
 ZONE T="027.05 ALPHA 4.84"
@@ -109,7 +109,7 @@ AUXDATA Tstatic         = "282"
 AUXDATA Deltat          = "2.64398e-6"
 AUXDATA GridFileName    = "wbh_aoa589_buffet_deformed_Level-3-2_16%_mm.pw"
 AUXDATA Misc            = "SHEAR FLOW CORRECTION OFF"
-             3             104071653    0.000004520    0.85   1.51e06  4.84  0.00000000   0.00000000  0.000000000   0.00000000    0.00000000   0.00000000      
+             3             106589433    0.000004520    0.85   1.51e06  4.84  0.70129036   0.06166930   0.04558441   0.00007381    0.00001340   0.00016422      
 
 ZONE T="027.05 ALPHA 5.89"
 AUXDATA Tstatic         = "282"
