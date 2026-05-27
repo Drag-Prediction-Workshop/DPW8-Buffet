@@ -100,7 +100,7 @@ DATASETAUXDATA Notes           = "Immersed Boundary Cartesian grid"
 # CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
 #    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
 #-------------------------------------------------------------------------------
-ZONE T="002.01 GRID LEVEL 1"
+ZONE T="002.01 GRID LEVEL 5"
 AUXDATA Tstatic         = "282.3869 K"
 AUXDATA Deltat          = "3.8994e-08"
 AUXDATA GridFileName    = "Volcano Grid"
@@ -109,7 +109,7 @@ AUXDATA Misc            = "Deltat is an average as it varies slightly between it
               1       492880983    1.602650e-06           0.848       1500000.0            2.29      0.42796718     0.030083040     -0.00467472      0.38939867     0.015857767     -0.11634378      0.01161929      0.01846375     -0.01665422     0.001413633      0.06363773      0.05522272     0.012811641      0.04803133            -999            -999            -999            -999            -999            -999     23.74559507    5.100305e-08              20              57            -999
 
 
-ZONE T="002.01 GRID LEVEL 2"
+ZONE T="002.01 GRID LEVEL 6"
 AUXDATA Tstatic         = "282.3869 K"
 AUXDATA Deltat          = "3.8994e-08"
 AUXDATA GridFileName    = "Volcano Grid"

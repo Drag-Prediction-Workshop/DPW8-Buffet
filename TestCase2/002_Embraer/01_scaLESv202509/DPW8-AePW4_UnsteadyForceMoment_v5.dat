@@ -96,7 +96,7 @@ DATASETAUXDATA Notes           = "Immersed Boundary Cartesian grid"
 #  REQUIRED:  VEHICLE F&M
 #  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
 #-------------------------------------------------------------------------------
-ZONE T="002.01 GRID LEVEL 1"
+ZONE T="002.01 GRID LEVEL 5"
 AUXDATA Tstatic         = "282.3869 K"
 AUXDATA Deltat          = "3.8994e-08"
 AUXDATA GridFileName    = "Volcano Grid"
@@ -105,7 +105,7 @@ AUXDATA Misc            = "Deltat is an average as it varies slightly between it
               1       492880983    1.602650e-06           0.848       1500000.0            2.29      0.42796718     0.030083040     -0.00467472      0.00030077     0.000045557      0.00054514
 
 
-ZONE T="002.01 GRID LEVEL 2"
+ZONE T="002.01 GRID LEVEL 6"
 AUXDATA Tstatic         = "282.3869 K"
 AUXDATA Deltat          = "3.8994e-08"
 AUXDATA GridFileName    = "Volcano Grid"

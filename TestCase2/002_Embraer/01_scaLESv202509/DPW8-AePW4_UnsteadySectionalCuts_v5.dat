@@ -77,8 +77,8 @@ DATASETAUXDATA GridId          = "Hex"
 DATASETAUXDATA Notes           = "Immersed Boundary Cartesian grid"
 
 
-ZONE T="002.01 - ALPHA 1.22 - GRID L1 - WING SECTION  1"
-AUXDATA GridLevel       = "1"
+ZONE T="002.01 - ALPHA 1.22 - GRID L5 - WING SECTION  1"
+AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "1.22"
@@ -2145,8 +2145,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.76659403      0.31731750      0.11104639      0.22868364     -0.38144475      0.04808121      0.00371431            -999
 
 
-ZONE T="002.01 - ALPHA 1.22 - GRID L1 - WING SECTION  2"
-AUXDATA GridLevel       = "1"
+ZONE T="002.01 - ALPHA 1.22 - GRID L5 - WING SECTION  2"
+AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "1.22"
@@ -3976,8 +3976,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.82889352      0.38078100      0.10567885      0.37343271     -0.26796106      0.01440593      0.00538070            -999
 
 
-ZONE T="002.01 - ALPHA 2.29 - GRID L1 - WING SECTION  1"
-AUXDATA GridLevel       = "1"
+ZONE T="002.01 - ALPHA 2.29 - GRID L5 - WING SECTION  1"
+AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "2.29"
@@ -6024,8 +6024,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.78249780      0.31731750      0.11241691      0.34511063     -0.81903154      0.01090778      0.00519139            -999
 
 
-ZONE T="002.01 - ALPHA 2.29 - GRID L1 - WING SECTION  2"
-AUXDATA GridLevel       = "1"
+ZONE T="002.01 - ALPHA 2.29 - GRID L5 - WING SECTION  2"
+AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "2.29"
@@ -7877,8 +7877,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.87913998      0.38078100      0.11714756      0.78846718     -0.26280919      0.01338162      0.00352953            -999
 
 
-ZONE T="002.01 - ALPHA 4.84 - GRID L2 - WING SECTION  1"
-AUXDATA GridLevel       = "2"
+ZONE T="002.01 - ALPHA 4.84 - GRID L6 - WING SECTION  1"
+AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "4.84"
@@ -12467,8 +12467,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.87195294      0.31731750      0.10670030      0.99998567     -0.23363641      0.04624110      0.00134493            -999
 
 
-ZONE T="002.01 - ALPHA 4.84 - GRID L2 - WING SECTION  2"
-AUXDATA GridLevel       = "2"
+ZONE T="002.01 - ALPHA 4.84 - GRID L6 - WING SECTION  2"
+AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "4.84"
@@ -16498,8 +16498,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.90474661      0.38078100      0.11359876      0.99997734     -0.19631858      0.03112514      0.00062308            -999
 
 
-ZONE T="002.01 - ALPHA 5.89 - GRID L2 - WING SECTION  1"
-AUXDATA GridLevel       = "2"
+ZONE T="002.01 - ALPHA 5.89 - GRID L6 - WING SECTION  1"
+AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "5.89"
@@ -22202,8 +22202,8 @@ AUXDATA GridFileName    = "Volcano Grid"
      0.76008281      0.31731750      0.11060465      0.18101772     -1.25009751      0.01049794      0.00328358            -999
 
 
-ZONE T="002.01 - ALPHA 5.89 - GRID L2 - WING SECTION  2"
-AUXDATA GridLevel       = "2"
+ZONE T="002.01 - ALPHA 5.89 - GRID L6 - WING SECTION  2"
+AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.848"
 AUXDATA Re              = "1500000.0"
 AUXDATA Alpha           = "5.89"
