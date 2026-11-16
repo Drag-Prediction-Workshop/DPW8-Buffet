@@ -1,0 +1,23 @@
+
+
+PARTICIPANT / SUBMISSION IDENTIFICATION AND METADATA RECONCILIATION
+ParticipantID = 008
+SubmissionID  = 01
+SubmissionKey = 008.01
+Dataset       = DPW8/AePW4 Case 3 - Cadence L2 (half-span)
+SubmissionID 02 reserved for half-span MIME; SubmissionID 03 for full-span MIME.
+
+User-confirmed metadata for all eight Tecplot datasets:
+  SolverName: CFD++ version 22.5
+  Alpha_deg / AUXDATA Alpha: 4.704 degrees
+  Tstatic_K / AUXDATA Tstatic: 287 K (nominal rounded submission value)
+  Mach: 0.848
+  Reynolds number: 2.22e6
+
+JAXA modal stick model. No changes were made to
+those separate structural model fields without explicit confirmation.
+
+All numerical data records, zone sizes, grid connectivity, probe coordinates,
+and startup transients were preserved byte-for-byte. The 147-iteration restart
+overlap remains in the full raw file only. This release differs from the
+preceding 008.01 package only in metadata headers and this QA report.

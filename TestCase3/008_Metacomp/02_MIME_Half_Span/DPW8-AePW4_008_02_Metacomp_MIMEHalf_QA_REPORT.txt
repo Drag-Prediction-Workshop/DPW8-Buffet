@@ -1,0 +1,49 @@
+DPW8/AePW4 CASE 3: MIME HALF-SPAN - SUBMISSION QA REPORT
+Participant ID 008, Submission ID 02, Submission key 008.02
+This report applies exclusively to the MIME half-span solution, participant 008, submission 02 (008.02).
+
+SUBMISSION METADATA (participant-confirmed):
+  Solver: CFD++ version 22.5
+  Mach: 0.848
+  Reynolds number (MAC): 2.22e6
+  Angle of attack: 4.704 deg
+  Nominal static temperature: 287 K
+  Grid: MIME half-span
+  Solver model: HRLES / SA-QCR-based DDES with large time-step filter augmentation
+
+SCIENTIFIC AND FORMAT CHECKS:
+  - Bending/twist: 14 zones x 7,501 records = 105,014 unchanged samples; all zone Tstatic=287 K; source numerical SHA-256 unchanged.
+  - Surface_Cuts_Cp.dat: cp_eta_0.5021(2).dat: 249 rows (1 duplicated full row), cp_eta_0.6028(2).dat: 223 rows (1 duplicated full row)
+  - Surface_Cuts_Cp_rms.dat: cprms_eta_0.4997(2).dat: 250 rows (1 duplicated full row), cprms_eta_0.6004(2).dat: 222 rows (1 duplicated full row)
+  - cp(1).tec -> DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_Pressure.tec: 299,632 nodes, 304,355 faces; original FE numeric payload SHA-256 unchanged.
+  - cp_rms(1).tec -> DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_RMS_Pressure.tec: 299,632 nodes, 304,355 faces; original FE numeric payload SHA-256 unchanged.
+  - Surface consistency: identical coordinates and connectivity; 11,943 embedded triangles with duplicated 4th corner; max Cp residual=1.974e-07; max Cp_rms residual=1.809e-08.
+  - Forces: 27,850 source rows, 2,650 zero-time rows, 350 repeated steps; 25,000 continuous positive-time unique-step records; full raw chronology also supplied.
+  - Forces: raw coefficient alpha=4.701, submission alpha=4.704; CL/force check max discrepancy=6.841e-08, CD/force check=7.998e-09.
+  - Forces: step reversals at [(2650, 2650, 2501, 0.0, 2e-05), (3350, 3200, 3001, 0.014, 0.01002)]; moments centered at (0.67666, 0.0, -0.023698) m.
+  - Kulites: 22 probes x 8,001 samples = 176,022 records; t=0.34000000..0.50000000 s; dt median=2e-05 s; identical time bases; source time and pressure tokens preserved.
+  - Kulites: absolute pressure in Pa assumed, consistent with the MIME half-span CFD++ reference conditions; original probe file headers do not explicitly name physical pressure units.
+
+ORIGIN CONVENTION:
+  Participant note: CFD grid retains the origin from an earlier JAXA website diagram, subsequently removed; grid coordinates were not shifted.
+  Participant note: moment reference center was shifted in existing CFD grid coordinates to match the intended JAXA physical moment center; grid origin itself was not shifted.
+
+NOTES / SUBMISSION CAVEATS:
+  - Kulite source data label the second column Pressure but not explicitly Pa; Pa/absolute interpretation is assumed.
+  - Section cut inputs were sorted by x, preserving every original numeric record and duplicate seam endpoints.
+  - Surface FE numeric payloads were copied byte-for-byte; all indices are in range.
+  - Force source coefficient normalization used 4.701 deg, while participant-selected reporting angle is 4.704 deg. Coefficients not rotated/recomputed.
+  - Source force history contains intentional nonphysical startup transients, preserved in both variants.
+  - Main MIME half-span force file retains only positive times and the final occurrence of duplicate steps. Full raw file retains all records.
+  - SubmissionDate in bending/twist header remains TBD; no actual submission date was supplied.
+  - Format validation is structural and numerical; no import in Tecplot 360 was performed.
+
+FILE INVENTORY:
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_BendingTwist.dat: 14 zone(s), 105,014 numeric lines, 5,046,948 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_Surface_Cuts_Cp.dat: 2 zone(s), 472 numeric lines, 24,139 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_Surface_Cuts_Cp_rms.dat: 2 zone(s), 472 numeric lines, 24,365 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_UnsteadyForceMoment_CORRECTED.dat: 1 zone(s), 25,000 numeric lines, 5,528,622 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_UnsteadyForceMoment_FULL_RAW.dat: 1 zone(s), 27,850 numeric lines, 6,163,993 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_VirtualKulite_PressureHistories.dat: 22 zone(s), 176,022 numeric lines, 14,616,828 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_Pressure.tec: 1 zone(s), 903,619 numeric lines, 30,833,511 bytes
+  - DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_RMS_Pressure.tec: 1 zone(s), 903,619 numeric lines, 30,833,526 bytes

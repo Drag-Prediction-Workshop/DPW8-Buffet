@@ -1,0 +1,75 @@
+DPW8/AePW4 CASE 3: MIME FULL-SPAN - SUBMISSION QA REPORT
+Participant 008; Submission 03; Combined submission identifier 008.03
+This QA report applies EXCLUSIVELY to the MIME FULL-SPAN solution.
+Original numerical data remain unchanged. New mean Cp section cuts added. Both Cp and Cp_rms sectional records are sorted by x; all original duplicates retained. Existing Kulite CTU and Cp remain derived quantities.
+
+PARTICIPANT-CONFIRMED SUBMISSION METADATA
+  CFD++ version: 22.5
+  Mach: 0.848
+  Reynolds number (MAC): 2.22e6
+  Angle of attack: 4.704 degrees
+  Nominal static temperature: 287 K
+  Mesh: MIME FULL-SPAN. Wing bending/twist output includes both positive and negative ETA.
+  Method: HRLES / SA-QCR-based DDES with large time-step filter augmentation.
+  Freestream p=74887.35 Pa; rho=0.9086576 kg/m3; U=288.0474 m/s; reference MAC=0.15131 m.
+  Dynamic pressure q=0.5 rho U^2=37696.253274596893 Pa.
+  CTU factor U/MAC = 1903.690436851497 inverse seconds.
+  Source force CL/CD used alpha=4.701 degrees, not 4.704; coefficients preserved exactly.
+  Source deformation metadata static temperature 286.977 K replaced by nominal 287 K; values unchanged.
+
+DATASET CHECKS
+  - Bending/twist: 28 zones (14 +Y, 14 -Y) x 25,502 samples = 714,056 source numerical records preserved byte-for-byte; all 28 static temperatures normalized to 287 K; all original ETA locations retained. Temporal extent 0.35000..0.86002 s.
+  - Cp cut cp_eta_0.5021(3).dat: RIGHT wing (+Y), eta=+0.5021; 248 records, 0 exact duplicate records; y=[0.31950581,0.31950581], Cp=[-1.2291899,0.63708419].
+  - Cp cut cp_eta_0.6028(3).dat: RIGHT wing (+Y), eta=+0.6028; 223 records, 1 exact duplicate records; y=[0.38358504,0.38358504], Cp=[-1.1859581,0.64901966].
+  - Cp cut cp_etaL_0.5021.dat: LEFT wing (-Y), eta=-0.5021; 249 records, 0 exact duplicate records; y=[-0.31950480,-0.31950480], Cp=[-1.2241687,0.63573033].
+  - Cp cut cp_etaL_0.6028.dat: LEFT wing (-Y), eta=-0.6028; 224 records, 1 exact duplicate records; y=[-0.38358405,-0.38358405], Cp=[-1.1794914,0.64504915].
+  - Cp_rms cut cprms_eta_0.4997(4).dat: RIGHT wing (+Y), eta=+0.4997; 249 records, 0 exact duplicate records; y=[0.31797859,0.31797859], Cp_rms=[0.0026002517,0.13221408].
+  - Cp_rms cut cprms_eta_0.6004(4).dat: RIGHT wing (+Y), eta=+0.6004; 222 records, 1 exact duplicate records; y=[0.38205785,0.38205785], Cp_rms=[0.0027344702,0.1999706].
+  - Cp_rms cut cprms_etaL_0.4997(1).dat: LEFT wing (-Y), eta=-0.4997; 251 records, 0 exact duplicate records; y=[-0.31797761,-0.31797761], Cp_rms=[0.0015035905,0.10182755].
+  - Cp_rms cut cprms_etaL_0.6004(1).dat: LEFT wing (-Y), eta=-0.6004; 222 records, 1 exact duplicate records; y=[-0.38205683,-0.38205683], Cp_rms=[0.00056916132,0.16369621].
+  - FE cp(2).tec: 598,171 surface nodes, 608,710 quadrilateral element records; all node and connectivity payload preserved byte-for-byte.
+  - FE cp_rms(2).tec: 598,171 surface nodes, 608,710 quadrilateral element records; all node and connectivity payload preserved byte-for-byte.
+  - Surface validation: matching mean and RMS mesh coordinates/connectivity; 23,886 triangles encoded via repeated fourth node; max Cp residual 2.1167e-07, max Cp_rms residual 3.8163e-08.
+  - Surface coordinate ranges [m] X=6.56e-14..1.3902; Y=-0.63634..0.63634; Z=-0.071427..0.066934.
+  - Forces: 45,091 raw rows, 2,650 zero-time initialization records, 150 repeated step IDs, 42,441 unique positive-time records in primary and complete raw chronology also supplied. Step reversals: [(2650, 2650, 2501, 0.0, 2e-05)].
+  - Forces: reference area Aref=0.179014 m^2 (double the half-span value, preserved from source); moment center (x,y,z)=(0.67666,0.0,-0.023698) m.
+  - Forces: source coefficient alpha=4.701 deg versus 4.704 deg submission metadata; original CL and CD coefficient rotation matches source with max residual CL=3.948e-08, CD=8.408e-09. Source force time ends at 0.84882 s.
+  - Kulites: 22 positive-Y probes x 26,002 samples = 572,044 rows. All times identical and monotonic, range 0.34000..0.86002 s, dt median 2e-05 s.
+  - Kulites: all supplied source probes are positive-Y (no negative-Y/left probes provided); original second column is labeled pressure, units assumed absolute Pa, no physical-unit statement in source.
+
+DATA GAPS AND INTERPRETATION WARNINGS
+  - All expected RIGHT (+Y) and LEFT (-Y) mean Cp and Cp_rms sections are now included. No mean sectional-Cp gap remains.
+  - Cp eta and Cp_rms eta differ slightly in source filenames; exact source coordinates were retained.
+  - Mean Cp cuts now supplied for BOTH wings at abs(eta)=0.5021 and 0.6028, with RIGHT=+Y and LEFT=-Y; all four included.
+  - Four source Cp_rms cuts cover BOTH wings at abs(eta)=0.4997 and 0.6004. These four files are byte-for-byte identical to the previous 008.03 source files, and the sorted numeric zone contents are unchanged.
+  - Cp and Cp_rms use slightly different source-reported section eta values; no artificial station matching or interpolation performed.
+  - No negative-Y virtual Kulite probes provided (all 22 positions supplied have Y>0). So probe locations mirrored to left wing.
+  - Kulite pressure source gives no explicit pressure units: interpreted as absolute Pa based on CFD++ SI reference state.
+  - Force positive-time range ends before the Kulite and deformation histories; timestamps preserved without extrapolation.
+  - Full-span force normalization uses Aref=0.179014 m2 from its own source (twice the half-span area).
+  - Force source alpha=4.701 versus participant reporting angle 4.704; no coefficient recalculation.
+  - Large initial load excursions associated with numerical algorithm switches retained as supplied.
+  - Full raw history includes initialization and restart steps; the main history omits zero-time rows and keeps final occurrence of each step ID.
+  - SubmissionDate in wing-deformation source is TBD; no actual date provided.
+  - Independent Tecplot 360 import test not performed. FE connectivity, counts, and file structure tested programmatically.
+
+JAXA COORDINATE REFERENCE CONVENTION
+  Participant note: CFD grid retains origin shown in an earlier JAXA website diagram, subsequently removed; original grid coordinates were not shifted.
+  Participant note: moment reference center shifted in the original CFD grid coordinates to represent intended JAXA physical moment center; grid origin itself was not shifted.
+
+
+UPDATES IN THIS VERSION
+  - Added 4-zone mean Cp section Tecplot dataset: 2 right-wing (+Y) and 2 left-wing (-Y) cuts.
+  - Re-labeled all 4 RMS cut zones with explicit RIGHT/LEFT wing and signed-Y metadata; original numeric payload unchanged.
+  - No changes to the other six data files (bytewise copies of version 1).
+  - Data origin: freshly uploaded four cp files and four RMS files; verified RMS numerical identity to version 1.
+
+FILE INVENTORY
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_BendingTwist.dat: 28 zone(s), 714,056 numeric records/lines, 34,285,969 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_Surface_Cuts_Cp.dat: 4 zone(s), 944 numeric records/lines, 47,592 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_Surface_Cuts_Cp_rms.dat: 4 zone(s), 944 numeric records/lines, 48,425 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_UnsteadyForceMoment_CORRECTED.dat: 1 zone(s), 42,441 numeric records/lines, 9,380,697 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_UnsteadyForceMoment_FULL_RAW.dat: 1 zone(s), 45,091 numeric records/lines, 9,969,796 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_VirtualKulite_PressureHistories.dat: 22 zone(s), 572,044 numeric records/lines, 47,486,574 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_Wing_Pressure.tec: 1 zone(s), 1,805,052 numeric records/lines, 62,064,023 bytes
+  - DPW8-AePW4_008_03_Metacomp_MIMEFull_Wing_RMS_Pressure.tec: 1 zone(s), 1,805,052 numeric records/lines, 62,064,038 bytes

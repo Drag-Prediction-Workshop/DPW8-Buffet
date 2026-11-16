@@ -1,0 +1,186 @@
+DPW8 / AePW4 - TEST CASE 3
+METACOMP TECHNOLOGIES, INC. - SUBMISSION FILE SUMMARY
+Participant ID: 008
+Prepared: 15 November 2026
+
+PURPOSE
+-------
+This document describes the Tecplot ASCII files in the FINAL prepared packages
+for three CFD++ computations of the NASA CRM wing/body/tail configuration.
+These are three submissions for DPW8/AePW4 TEST CASE 3, not three different
+workshop test cases.
+
+SUBMISSIONS AND PACKAGE VERSIONS
+--------------------------------
+008.01  Cadence L2, half-span  DPW8_008_01_Metacomp_CadenceL2_Submission_v2.zip
+008.02  MIME, half-span        DPW8_008_02_Metacomp_MIMEHalf_Submission_v2.zip
+008.03  MIME, full-span        DPW8_008_03_Metacomp_MIMEFull_Submission_v2.zip
+
+Each ZIP contains 8 Tecplot ASCII data files plus 1 quality-assurance report.
+Files ending in .dat and .tec are both Tecplot ASCII data files. The
+"FULL_RAW" force history is provided to document the complete calculation
+sequence; the "CORRECTED" force history is the primary continuous positive-
+time version. "CORRECTED" refers to chronological assembly of restart data,
+not to adjustment of the force coefficients.
+
+COMMON SUBMISSION METADATA
+--------------------------
+Participant ID             008
+CFD code                   CFD++ version 22.5
+Mach number                0.848
+Reynolds number (MAC)      2.22e6
+Reported angle of attack   4.704 degrees
+Reported static temperature 287 K (nominal rounded value)
+Freestream pressure        74887.35 Pa
+Freestream density         0.9086576 kg/m^3
+Freestream velocity        288.0474 m/s
+Reference MAC              0.15131 m
+Dynamic pressure           0.5*rho*U^2 = 37696.2533 Pa
+
+The original CFD++ force-coefficient output lists alpha = 4.701 degrees,
+whereas the user-confirmed submission metadata report 4.704 degrees.
+Coefficient values were NOT recalculated or rotated. The freestream pressure
+and density imply a static temperature of about 287.11 K by the ideal-gas
+law; 287 K is the requested nominal reporting value.
+
+COORDINATE / MOMENT REFERENCE CONVENTION
+----------------------------------------
+The CFD grids retain the coordinate origin from an earlier JAXA website
+diagram, subsequently removed. Instead of translating the grid, the moment
+center was shifted in the existing grid coordinate system to correspond to
+the intended JAXA physical moment center. The source force files use the
+moment center (x,y,z) = (0.676660, 0, -0.023698) m.
+
+FILE TYPES AND HOW TO INTERPRET THEM
+------------------------------------
+BendingTwist.dat:
+    Wing deformation history, VARIABLES = TIME, BEND, TWIST. Separate
+    Tecplot zones for span stations (signed ETA in the full-span case).
+Surface_Cuts_Cp.dat:
+    Mean pressure coefficient at sectional cuts, VARIABLES = x, y, z, Cp.
+    One Tecplot zone per cut; source rows are sorted by x.
+Surface_Cuts_Cp_rms.dat:
+    RMS pressure-coefficient cuts, VARIABLES = x, y, z, Cp_rms.
+UnsteadyForceMoment_CORRECTED.dat:
+    Main continuous positive-time force/moment coefficient history.
+    Contains iteration, time, convective time, lift, drag, moments and
+    Cartesian force coefficients. Restart overlaps are resolved by retaining
+    the final occurrence of each step; zero-time initialization is omitted.
+UnsteadyForceMoment_FULL_RAW.dat:
+    Complete, unfiltered source chronology including zero-time initialization,
+    restarts, duplicate iterations and startup algorithm-switch transients.
+VirtualKulite_PressureHistories.dat:
+    Time-dependent virtual surface pressure probes. One zone per probe;
+    variables Time_s, Time_CTU, Pressure_Pa, Cp. Probe coordinates are stored
+    in zone metadata. Time_CTU = Time_s * Uinf / reference_MAC. Pressure is
+    interpreted as absolute Pa (not explicitly labeled in original probes).
+Wing_Pressure.tec:
+    Finite-element surface mesh with X,Y,Z, mean pressure (p_mean) and Cp.
+Wing_RMS_Pressure.tec:
+    Matching surface mesh with X,Y,Z, RMS pressure (p_rms) and Cp_rms.
+QA_REPORT.txt:
+    Detailed source/provenance, conversion checks and known caveats.
+
+----------------------------------------------------------------------------
+SUBMISSION 008.01 - CADENCE L2, HALF-SPAN
+Package: DPW8_008_01_Metacomp_CadenceL2_Submission_v2.zip
+----------------------------------------------------------------------------
+01  DPW8-AePW4_008_01_Metacomp_CadenceL2_BendingTwist.dat
+    14 span-station zones; 261,100 deformation samples in total.
+02  DPW8-AePW4_008_01_Metacomp_CadenceL2_Surface_Cuts_Cp.dat
+    2 right-wing (+Y) mean Cp cuts, eta approximately 0.5021 and 0.6028;
+    384 points total (191 + 193).
+03  DPW8-AePW4_008_01_Metacomp_CadenceL2_Surface_Cuts_Cp_rms.dat
+    2 right-wing (+Y) RMS Cp cuts, eta approximately 0.4997 and 0.6004;
+    388 points total (198 + 190).
+04  DPW8-AePW4_008_01_Metacomp_CadenceL2_UnsteadyForceMoment_CORRECTED.dat
+    Primary positive-time history: 27,149 records.
+05  DPW8-AePW4_008_01_Metacomp_CadenceL2_UnsteadyForceMoment_FULL_RAW.dat
+    Full source chronology: 29,397 records (including initialization/restart).
+06  DPW8-AePW4_008_01_Metacomp_CadenceL2_VirtualKulite_PressureHistories.dat
+    22 probes x 19,151 samples = 421,322 records;
+    time approximately 0.34001 to 0.72301 s.
+07  DPW8-AePW4_008_01_Metacomp_CadenceL2_Wing_Pressure.tec
+    Mean surface pressure / Cp; 345,230 nodes and 347,546 surface elements.
+08  DPW8-AePW4_008_01_Metacomp_CadenceL2_Wing_RMS_Pressure.tec
+    RMS surface pressure / Cp_rms; same 345,230-node / 347,546-element mesh.
+QA  DPW8-AePW4_008_01_Metacomp_CadenceL2_QA_REPORT.txt
+    Metadata reconciliation and source-history qualifications.
+
+----------------------------------------------------------------------------
+SUBMISSION 008.02 - MIME, HALF-SPAN
+Package: DPW8_008_02_Metacomp_MIMEHalf_Submission_v2.zip
+----------------------------------------------------------------------------
+01  DPW8-AePW4_008_02_Metacomp_MIMEHalf_BendingTwist.dat
+    14 span-station zones x 7,501 samples = 105,014 deformation records.
+02  DPW8-AePW4_008_02_Metacomp_MIMEHalf_Surface_Cuts_Cp.dat
+    2 right-wing (+Y) mean Cp cuts, eta approximately 0.5021 and 0.6028;
+    472 points total (249 + 223).
+03  DPW8-AePW4_008_02_Metacomp_MIMEHalf_Surface_Cuts_Cp_rms.dat
+    2 right-wing (+Y) RMS Cp cuts, eta approximately 0.4997 and 0.6004;
+    472 points total (250 + 222).
+04  DPW8-AePW4_008_02_Metacomp_MIMEHalf_UnsteadyForceMoment_CORRECTED.dat
+    Primary positive-time history: 25,000 records.
+05  DPW8-AePW4_008_02_Metacomp_MIMEHalf_UnsteadyForceMoment_FULL_RAW.dat
+    Full source chronology: 27,850 records.
+06  DPW8-AePW4_008_02_Metacomp_MIMEHalf_VirtualKulite_PressureHistories.dat
+    22 probes x 8,001 samples = 176,022 records; time 0.34000 to 0.50000 s.
+07  DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_Pressure.tec
+    Mean surface pressure / Cp; 299,632 nodes and 304,355 surface elements.
+08  DPW8-AePW4_008_02_Metacomp_MIMEHalf_Wing_RMS_Pressure.tec
+    RMS surface pressure / Cp_rms; same 299,632-node / 304,355-element mesh.
+QA  DPW8-AePW4_008_02_Metacomp_MIMEHalf_QA_REPORT.txt
+    MIME HALF-SPAN validation, data counts, and provenance notes.
+
+----------------------------------------------------------------------------
+SUBMISSION 008.03 - MIME, FULL-SPAN
+Package: DPW8_008_03_Metacomp_MIMEFull_Submission_v2.zip
+----------------------------------------------------------------------------
+01  DPW8-AePW4_008_03_Metacomp_MIMEFull_BendingTwist.dat
+    28 span-station zones (14 right/+Y and 14 left/-Y) x 25,502 samples
+    = 714,056 deformation records.
+02  DPW8-AePW4_008_03_Metacomp_MIMEFull_Surface_Cuts_Cp.dat
+    4 mean Cp cuts: 2 right (+Y) and 2 left (-Y). Absolute eta approximately
+    0.5021 and 0.6028; 944 points total (471 right + 473 left).
+03  DPW8-AePW4_008_03_Metacomp_MIMEFull_Surface_Cuts_Cp_rms.dat
+    4 RMS Cp cuts: 2 right (+Y) and 2 left (-Y). Absolute eta approximately
+    0.4997 and 0.6004; 944 points total (471 right + 473 left).
+04  DPW8-AePW4_008_03_Metacomp_MIMEFull_UnsteadyForceMoment_CORRECTED.dat
+    Primary positive-time history: 42,441 records; ends at 0.84882 s.
+05  DPW8-AePW4_008_03_Metacomp_MIMEFull_UnsteadyForceMoment_FULL_RAW.dat
+    Full source chronology: 45,091 records.
+06  DPW8-AePW4_008_03_Metacomp_MIMEFull_VirtualKulite_PressureHistories.dat
+    22 positive-Y/right-wing probes x 26,002 samples = 572,044 records;
+    time 0.34000 to 0.86002 s. No left-wing probes were supplied.
+07  DPW8-AePW4_008_03_Metacomp_MIMEFull_Wing_Pressure.tec
+    Mean surface pressure / Cp; 598,171 nodes and 608,710 surface elements.
+08  DPW8-AePW4_008_03_Metacomp_MIMEFull_Wing_RMS_Pressure.tec
+    RMS surface pressure / Cp_rms; same 598,171-node / 608,710-element mesh.
+QA  DPW8-AePW4_008_03_Metacomp_MIMEFull_QA_REPORT.txt
+    MIME FULL-SPAN validation, left/right-wing labels, source and caveats.
+
+IMPORTANT DISTINCTIONS / KNOWN QUALIFICATIONS
+---------------------------------------------
+1. Full-span (008.03) force-coefficient reference area is 0.179014 m^2;
+   half-span runs use 0.089507 m^2. Do not mix these normalizations.
+2. Sectional mean Cp and RMS Cp cuts use slightly different reported eta
+   values. Their source station values were preserved; no interpolation was
+   applied to make them coincide.
+3. The full-span left-wing cuts are separately annotated in the zone titles
+   and metadata. All supplied virtual Kulite probes are on the positive-Y
+   wing even for 008.03.
+4. Large, nonphysical force excursions during numerical algorithm switches
+   in the startup history are intentionally retained. The FULL_RAW files also
+   preserve original restart/initialization chronology.
+5. Missing pressure/viscous drag decomposition in force histories uses
+   the -999 sentinel. C_M_pitch is a duplicate of C_My, matching the
+   established output convention.
+6. The original Kulite source files do not explicitly specify units for
+   pressure; the Tecplot output uses the assumed absolute-Pa interpretation.
+7. Source data and processing were programmatically checked as detailed
+   in the case-specific QA reports; an interactive Tecplot 360 import has
+   not been independently performed.
+8. The submission date in deformation metadata remains TBD where it was not
+   supplied. Use the actual delivery date when submitting.
+
+END OF FILE SUMMARY
